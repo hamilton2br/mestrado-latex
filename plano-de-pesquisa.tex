@@ -3,7 +3,7 @@
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	twoside,			% para impressão em verso e anverso. Oposto a oneside
+	oneside,			% para impressão em verso e anverso. Oposto a oneside
 	a4paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
@@ -176,22 +176,23 @@ Científica em Engenharia de Computação.}
 % ----------------------------------------------------------
 \chapter{Introdução}
 
-Os crescentes avanços tecnilógicos que têm ajudado a vida do ser humano também trouxeram diversos novos tipos de crimes relacionados a tecnologia da informação. (citação)
-Quando do evento de um crime, há a necessidade de preservar as evidências de modo que apoiem processos investigativos e legais mas também para que possamos compreender a sequência
+Os crescentes avanços tecnológicos que têm ajudado a vida do ser humano também trouxeram diversos novos tipos de crimes relacionados a tecnologia da informação. (citação)
+Quando do evento de um crime, há a necessidade de preservar as evidências de modo que apoiem processos legais e investigativos mas também para que possamos compreender a sequência
 de eventos envolvidos no ataque de modo que possamos evitar que estas vulnerabilidades sejam exploradas novamente.
 
 \par
 
 Ciência forense digital é uma ferramenta importante para a solução de crimes cometidos com um computador pela sua capacidade de reconstruir a cena do crime a partir das evidências
-digitais deixadas por um ataque. Com o crescente uso de ferramentas online, virtualização e hospedagem em nuvem, o volume de dados gerado por esses sistemas que já era uma preocupação
-da comunidade forense em 2008 (citação), hoje começou a inviabilizar algumas de suas práticas. (citação)
+digitais deixadas por um ataque. A forense digital evoluiu nos últimos anos de uma fase ad hoc, passando por uma fase de adaptação aos requisitos legais até a era de ferramental
+avançado de coleta e análise (citação). Com o crescente uso de ferramentas online, virtualização e hospedagem em nuvem, o volume de dados gerado por esses sistemas que já era uma preocupação
+da comunidade forense em 2008 (citação), hoje começou a inviabilizar algumas de suas práticas (citação).  
 
 \par
 
 Coma funcionalidade da elasticidade de carga ofertada pelos provedores de nuvem, por meio da qual infraestrutura pode ser alocada e desalocada dinamicamente, veio à tona o problema
 da volatilidade dos dados nas máquinas virtuais. Com algumas ameaças que não deixam evidências em disco(citação), a memória de uma máquina despejada de um pool seria para sempre
 perdida. Com a máquina mais poderosa hoje ofertada pela Amazon tendo 240Gb de memória (citação), o ferramental forense disponível hoje esta pouco adaptado a desafios trazidos 
-pela núvem (citação).
+pela núvem (citação). A forense digital precisa evoluir.
 
 % ----------------------------------------------------------
 % Capitulo de justificativa 
@@ -199,56 +200,122 @@ pela núvem (citação).
 \chapter{Justificativa}
 
 A tecnologia hoje é parte de nossas vidas e também é parte da vida dos criminosos. O último crime registrado na America do Norte que não envolveu uma evidência digital data de 2011
-(citação), no Brasil só em 2015 houve um aumento de 87\% no registro de notas relacionadas a abusos ou crimes digitais (citação), forense digital é uma disciplina que precisa avançar
-para ajudar na resposta da lei a esses delitos.
+(citação), no Brasil só em 2015 houve um aumento de 87\% no registro de notas relacionadas a abusos ou crimes digitais (citação).
 
 \par
 
 Do ponto de vista forense, praticantes e pesquisadores concordam que aspectos legais e o crescente volume de dados figuram entre as principais dificuldades trazidas pela computação 
-em nuvem (citação). As técnicas forenses atuais são da época pré-nuvem onde o controle da evidência é um de seus principais pilares (citação). No processo de coleta de evidências, remove-se o 
-hardware relacionado ao caso e o coloca sob custódia. Com a nuvem, o aspecto multi inquilino impede esta prática pois a mídia é compartilhada com outros usários, removê-la seria 
-uma violação da privacidade de usuários não relacionados a investigação. Outro aspecto da implementação da nuvem é o carater distribuído, a evidência pode estar localizada em um 
-país diferente daquele em que o crime foi cometido dificultando a obtenção da mesma (citação). O crescente volume de dados das aplicações operando em nuvem caminha para inviabilizar
-a forense digital. Investigadores forenses hoje estão com 6 a 12 meses de backlog de dados para investigar (citação), download de terabytes de dados para análise tem levado horas
- para ser realizado e requer colaboração dos operadores de nuvem (citaçã. Mudar o paradigma de coleta de evidência tem sido proposto por pesquisadores e praticantes há alguns anos (citação), porém esta prática precisa submeter a 
-legislação pois em algum momento a evidência será usada em um processo legal.
+em nuvem (citação). As técnicas forenses atuais são da época pré-nuvem (citação), no momento da coleta de evidências, remove-se o hardware relacionado ao caso e o coloca sob 
+custódia. Alguns aspectos da nuvem estão inviabilizando algumas praticas forenses. O aspecto multi inquilino por exemplo impede a remoção do hardware pois o mesmo é compartilhado
+com outros usários, removê-la seria uma violação da privacidade de usuários não relacionados a investigação. Outro aspecto da implementação da nuvem é o carater distribuído, 
+a evidência pode estar localizada em um país diferente daquele em que o crime foi cometido dificultando a obtenção da mesma (citação). Por último, o crescente volume de dados 
+das aplicações atuais deram aos investigadores 6 a 12 meses de backlog de dados para investigar (citação), download de terabytes de dados para análise tem levado horas para ser 
+realizado e requer colaboração dos operadores de nuvem (citação). Mudar o paradigma de coleta de evidência tem sido proposto por pesquisadores e praticantes há alguns anos (citação)
+, porém esta prática precisa submeter a legislação para que seja aceita em um processo legal.
 
 \par
 
 Por fim, a criatividade dos criminosos para explorar vulnerabilidades trouxe a tona ataques que não deixam evidências em disco, toda a operação ocorre em memória (citação). Com o caráter 
 elástico das soluções em nuvem, uma maquina despejada de um pool e cujos recursos foram reutilizados não pode mais prover as evidências necessárias para investigação criminal e 
-assim o criminoso fica impune. Coletar a memória de máquinas em núvem de modo que sejam usadas com sucesso em um processo penal, sem sobrecarregar ainda mais os investigadores 
+assim o criminoso fica impune. Coletar a memória de processos de máquinas em núvem de modo que sejam usadas com sucesso em um processo penal, sem sobrecarregar ainda mais os investigadores 
 é a principal justificativa desta pesquisa.
+
+\par
+
+Uma máquina virtual é hospedada em um servidor físico real. A coleta de dados não pode ser realizado diretamente de dentro da máquina virtual pois o próprio processo de leitura da
+memória a altera. A principal técnica de coleta de informações de memória é a Virtual Machine Introspection (citacao), nesta técnica a máquina é pausada e via hypervisor realiza-se a leitura
+da memória e posteriormente uma tradução dos endereços de memória virtual para o real. As desvantagens desta implementação estão na necessidade de tradução dos endereços de memória,
+para realização da análise e necessidade de credenciais pra acesso e integração com o hypervisor. (citacao). Na frente de volume de dados baixados temos as técnicas da \"Proof of
+retrieveability\" e \"Proof of Data Possession\" que se apoiam na transmissão e comparação de hashes gerados a partir do conteúdo que se quer coletar porém o uso destas requer
+quer a informação tenha baixa volatilidade o que não é o caso da informação contida em memória temporária. Na frente legal, as abordagens atuais de live forensics onde esta pesquisa
+se concentra carecem de credibilidade por não produzirem evidências aceitas em um processo legal.(citação).
 
 % ----------------------------------------------------------
 % Capitulo de Objetivos 
 % ----------------------------------------------------------
 \chapter{Objetivos}
 
-Declarar e explicar as 3 hipõteses do trabalho, associa-los ao objetivo principal e os 3 sub-objetivos
+\begin{itemize}
+ \item Objetivo Principal
+
+ \begin{itemize}
+  \item O objetivo principal desta pesquisa é derivar um arcabouço que permita coletar a informação da memória de processos de máquinas em nuvem de modo que seja aceita em um processo legal,
+ sem violar jurisdição internacional e a privacidade dos usuários de nuvem não relacionados a investigação. Com isso confirmando as hipóteses relacionadas a este trabalho.
+ 
+ \begin{itemize}
+  \item Hipotese 1: É possível coletar dados de memória de processos em máquinas na nuvem de modo que se submetam com sucesso ao princípio de Daubert.
+  \item Hipotese 2: É possível realizar a coleta sem violar a privacidade de usuários da nuvem não envovidos no caso investigado.
+  \item Hipotese 3: É possível coletar tais dados sem envolver jurisdições de outros países.
+ \end{itemize}
+ 
+ \end{itemize}
+ 
+\end{itemize}
+
+\begin{itemize}
+ \item Sub Objetivos
+
+ \begin{itemize}
+  \item Coletar apenas a memória das máquinas involvidas na investigação
+  \item Levantar a taxa de erros do processo de coleta
+  \item Gerar evidências que se submetam com sucesso ao princípio de Daubert
+ \end{itemize}
+ 
+\end{itemize}
+
 
 % ----------------------------------------------------------
 % Plano de Trabalho 
 % ----------------------------------------------------------
 \chapter{Plano de Trabalho}
 
-Não faço ideia de como faremos isso mas estou muito interessado em saber... :)
+\begin{itemize}
+ \item reescrever isso
+ 
+ \begin{itemize}
+  \item implementação das imagens
+  \item implementação dos containers
+  \item verificar viabilidade do relacionamento imagem-container-máquina
+  \item gerar primeiro lote de evidências
+  \item buscar opiniões jurídias sobre a evidência gerada
+  \item buscar \% de erro na geração da evidência.
+ \end{itemize}
+
+\end{itemize}
 
 % ----------------------------------------------------------
 % Material e métodos
 % ----------------------------------------------------------
 \chapter{Material e Métodos}
 
-Implementação de virtualização de mercado.
-rede
-laboratorio
+\begin{itemize}
+ \item reescrever isso
+ 
+ \begin{itemize}
+  \item Implementação de virtualização de mercado.
+  \item Rede e laboratório para salvar informações coletadas.
+  \item Conta no dockerhub
+  \item laptop para [especificação aqui] desenvolvimento da solução
+ \end{itemize}
+
+\end{itemize}
 
 % ----------------------------------------------------------
 % Análise dos resultados
 % ----------------------------------------------------------
 \chapter{Análise dos Resultados}
 
-Nao faço a mais remota ideia de como fazer isso
+\begin{itemize}
+ \item reescrever isso
+ 
+ \begin{itemize}
+  \item avaliando as opiniões sobre a validade da evidência por representantes legais brasileiros.
+  \item verificando se a evidência se encaixa no principio de Daubert.
+  \item repetir o processo de coleta e verificar o nível de erro.
+ \end{itemize}
+
+\end{itemize}
+
 
 % ---
 % Finaliza a parte no bookmark do PDF
@@ -256,14 +323,6 @@ Nao faço a mais remota ideia de como fazer isso
 % e adiciona espaço de parte no Sumário
 % ---
 \phantompart
-
-% ---
-% Conclusão
-% ---
-\chapter{Considerações finais}
-
-considerei finalmente que estamos gastando mais tempo formatando o documento do 
-que realmente escrevendo seu conteúdo.
 
 % ----------------------------------------------------------
 % Referências bibliográficas

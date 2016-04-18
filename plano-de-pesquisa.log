@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.10)  17 APR 2016 23:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.10)  18 APR 2016 18:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -555,11 +555,11 @@ Headheight and headsep: 14.5pt and 19.8738pt
 Footskip: 30pt
 Columnsep and columnseprule: 10pt and 0pt
 Marginparsep and marginparwidth: 7pt and 42.9055pt
-Sidecapsep and sidecapwidth: 7pt and 92pt
-Sidebarhsep and sidebarwidth: 7pt and 92pt
+Sidecapsep and sidecapwidth: 7pt and 42pt
+Sidebarhsep and sidebarwidth: 7pt and 42pt
 Sidebarvsep and sidebartopsep: 14.5pt and 0pt
 Sidebarheight: 590.14995pt
-Sidefoothsep and sidefootwidth: 7pt and 92pt
+Sidefoothsep and sidefootwidth: 7pt and 42pt
 Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 ******************************************************
 
@@ -1025,9 +1025,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
-
-]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 154.
 
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
@@ -1065,36 +1063,35 @@ l.154
        [1
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.154 
-       [2
 
-] (./plano-de-pesquisa.toc) [3] [4
+] (./plano-de-pesquisa.toc) [2
 
-] [5
+] [3
 
-] [6
 
-] [7] [8
+] [4
 
-] [9] [10
+] [5]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 239.
 
-] [11]
-[12
 
-] [13] [14
+(/usr/share/texmf/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 239.
+ [6
 
-] [15] [16
+] [7
 
-] (./plano-de-pesquisa.bbl (./plano-de-pesquisa.brf)
+] [8
+
+] (./plano-de-pesquisa.bbl
+(./plano-de-pesquisa.brf)
 \tf@brf=\write5
 \openout5 = `plano-de-pesquisa.brf'.
 
-
-[17] [18
+ [9
 
 ]
 bibitemlist
@@ -1103,35 +1100,40 @@ LaTeX Warning: Empty `thebibliography' environment on input line 8.
 
 )
 No file plano-de-pesquisa.ind.
-[19]
+[10
+
+]
 \tf@toc=\write6
 \openout6 = `plano-de-pesquisa.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 341.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 341.
  (./plano-de-pesquisa.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 282.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 341.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 341.
 Package rerunfilecheck Info: File `plano-de-pesquisa.brf' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 282.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 341.
  ) 
 Here is how much of TeX's memory you used:
- 13431 strings out of 493304
- 199533 string characters out of 6139871
- 446593 words of memory out of 5000000
- 16626 multiletter control sequences out of 15000+600000
- 46795 words of font info for 62 fonts, out of 8000000 for 9000
+ 13472 strings out of 493304
+ 200171 string characters out of 6139871
+ 447466 words of memory out of 5000000
+ 16658 multiletter control sequences out of 15000+600000
+ 54771 words of font info for 71 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,12n,35p,270b,517s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/
-public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on plano-de-pesquisa.pdf (21 pages, 130403 bytes).
+ 42i,12n,35p,262b,517s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+ss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmsy10.pfb>
+Output written on plano-de-pesquisa.pdf (11 pages, 153558 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 15953 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 142 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 18505 words of extra memory for PDF output out of 20736 (max. 10000000)
 
