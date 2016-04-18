@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: plano-de-pesquisa.aux
 I couldn't open database file abntex2-modelo-references.bib
----line 67 of file plano-de-pesquisa.aux
+---line 59 of file plano-de-pesquisa.aux
  : \bibdata{abntex2-options,abntex2-modelo-references
  :                                                   }
 I'm skipping whatever remains of this command

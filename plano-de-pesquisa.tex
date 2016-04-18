@@ -159,46 +159,6 @@ Científica em Engenharia de Computação.}
 % ---
 
 % ---
-% inserir lista de ilustrações
-% ---
-\pdfbookmark[0]{\listfigurename}{lof}
-\listoffigures*
-\cleardoublepage
-
-% ---
-
-% ---
-% inserir lista de tabelas
-% ---
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables*
-\cleardoublepage
-
-% ---
-
-% ---
-% inserir lista de abreviaturas e siglas
-% ---
-\begin{siglas}
-  \item[Fig.] Area of the $i^{th}$ component
-  \item[456] Isto é um número
-  \item[123] Isto é outro número
-  \item[lauro cesar] este é o meu nome
-\end{siglas}
-% ---
-
-% ---
-% inserir lista de símbolos
-% ---
-\begin{simbolos}
-  \item[$ \Gamma $] Letra grega Gama
-  \item[$ \Lambda $] Lambda
-  \item[$ \zeta $] Letra grega minúscula zeta
-  \item[$ \in $] Pertence
-\end{simbolos}
-% ---
-
-% ---
 % inserir o sumario
 % ---
 \tableofcontents
@@ -216,8 +176,7 @@ Científica em Engenharia de Computação.}
 % ----------------------------------------------------------
 \chapter{Introdução}
 
-Os crescentes avanços tecnilógicos que têm ajudado a vida do ser humano também trouxeram diversos novos tipos de crimes relacionados a tecnologia da informação. 
-Segundo levantamento de 2015 do Colégio Notarial Brasileiro houve um aumento de 87\% no número de atas que comprovam abusos e crimes virtuais (citação).
+Os crescentes avanços tecnilógicos que têm ajudado a vida do ser humano também trouxeram diversos novos tipos de crimes relacionados a tecnologia da informação. (citação)
 Quando do evento de um crime, há a necessidade de preservar as evidências de modo que apoiem processos investigativos e legais mas também para que possamos compreender a sequência
 de eventos envolvidos no ataque de modo que possamos evitar que estas vulnerabilidades sejam exploradas novamente.
 
@@ -239,17 +198,27 @@ pela núvem (citação).
 % ----------------------------------------------------------
 \chapter{Justificativa}
 
+A tecnologia hoje é parte de nossas vidas e também é parte da vida dos criminosos. O último crime registrado na America do Norte que não envolveu uma evidência digital data de 2011
+(citação), no Brasil só em 2015 houve um aumento de 87\% no registro de notas relacionadas a abusos ou crimes digitais (citação), forense digital é uma disciplina que precisa avançar
+para ajudar na resposta da lei a esses delitos.
 
+\par
 
-Falar das dificuldades para se realizar forense em sistemas em nuvem, do 
-crescimentos dos crimes digitais, todos os crimes tem alguma parcela de 
-evidência digital, da adoção da nuvem mundo a fora, da dificuldade das 
-problemas de jurisdicao por causa da de implementação da nuvem do aspecto multi 
-inquilino das implementacoes em nuvem. As características específicas da memória 
-para este casos associadas ao caráter elástico das soluções em nuvem. Das 
-tentativas em outros campos de tentar resolver essas questões técnicas. A 
-necessidade de se submeter a regras de cunho legal para as provas geradas pela 
-forense.
+Do ponto de vista forense, praticantes e pesquisadores concordam que aspectos legais e o crescente volume de dados figuram entre as principais dificuldades trazidas pela computação 
+em nuvem (citação). As técnicas forenses atuais são da época pré-nuvem onde o controle da evidência é um de seus principais pilares (citação). No processo de coleta de evidências, remove-se o 
+hardware relacionado ao caso e o coloca sob custódia. Com a nuvem, o aspecto multi inquilino impede esta prática pois a mídia é compartilhada com outros usários, removê-la seria 
+uma violação da privacidade de usuários não relacionados a investigação. Outro aspecto da implementação da nuvem é o carater distribuído, a evidência pode estar localizada em um 
+país diferente daquele em que o crime foi cometido dificultando a obtenção da mesma (citação). O crescente volume de dados das aplicações operando em nuvem caminha para inviabilizar
+a forense digital. Investigadores forenses hoje estão com 6 a 12 meses de backlog de dados para investigar (citação), download de terabytes de dados para análise tem levado horas
+ para ser realizado e requer colaboração dos operadores de nuvem (citaçã. Mudar o paradigma de coleta de evidência tem sido proposto por pesquisadores e praticantes há alguns anos (citação), porém esta prática precisa submeter a 
+legislação pois em algum momento a evidência será usada em um processo legal.
+
+\par
+
+Por fim, a criatividade dos criminosos para explorar vulnerabilidades trouxe a tona ataques que não deixam evidências em disco, toda a operação ocorre em memória (citação). Com o caráter 
+elástico das soluções em nuvem, uma maquina despejada de um pool e cujos recursos foram reutilizados não pode mais prover as evidências necessárias para investigação criminal e 
+assim o criminoso fica impune. Coletar a memória de máquinas em núvem de modo que sejam usadas com sucesso em um processo penal, sem sobrecarregar ainda mais os investigadores 
+é a principal justificativa desta pesquisa.
 
 % ----------------------------------------------------------
 % Capitulo de Objetivos 
