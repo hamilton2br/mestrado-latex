@@ -71,6 +71,7 @@
 % ---
 \titulo{Coletando dados de memória de uma máquina em nuvem para análise forense}
 \autor{Hamilton Fonte II}
+\orientador{Marcos Antonio Simplício Jr}
 \local{São Paulo, Brasil}
 \data{2016, v-0.1}
 \instituicao{%
@@ -78,8 +79,8 @@
   \par
   Escola Politécnica - Engenharia de Computação
   \par
-  Programa de Pós-Graduação em Engenharia Elétrica}
-\tipotrabalho{Plano de Pesquisa de Pós-Graduação}
+  Programa de Pós Graduação em Engenharia Elétrica - Mestrado}
+\tipotrabalho{Plano de Pesquisa de Pós-Graduação - Mestrado}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
 \preambulo{Projeto de pesquisa para a disciplina Metodolodia de Pesquisa 
@@ -224,9 +225,10 @@ sobrecarregar ainda mais os investigadores é a principal justificativa desta pe
 A coleta de dados de memória não pode ser realizado diretamente de dentro da máquina virtual pois o próprio processo de leitura da memória a altera. A principal técnica de coleta
 de informações de memória é a Virtual Machine Introspection (citacao), nesta técnica a máquina é pausada e via hypervisor realiza-se a leitura da memória e em seguida a tradução dos 
 endereços de memória virtual para o real. As desvantagens desta implementação estão na necessidade de tradução dos endereços de memória, para realização da análise e necessidade de 
-credenciais pra acesso e integração com o hypervisor. (citacao). No que tange o volume de dados baixados temos as técnicas da \"Proof of retrieveability\" e \"Proof of Data Possession\" 
-que se apoiam na transmissão e comparação de hashes gerados a partir do conteúdo que se quer coletar porém o uso destas requer quer a informação tenha baixa volatilidade o que não 
-é o caso da informação contida em memória temporária. Na frente legal, as abordagens atuais de live forensics onde esta pesquisa se concentra carecem de credibilidade por não produzirem evidências aceitas em um processo legal.(citação).
+credenciais pra acesso e integração com o hypervisor. (citacao). No que tange o volume de dados baixados temos as técnicas da \textbf{Proof of retrieveability} 
+e \textbf{Proof of Data Possession} que se apoiam na transmissão e comparação de hashes gerados a partir do conteúdo que se quer coletar porém o uso destas requer
+quer a informação tenha baixa volatilidade o que não é o caso da informação contida em memória temporária. Na frente legal, as abordagens atuais de live forensics onde esta 
+pesquisa se concentra carecem de credibilidade por não produzirem evidências aceitas em um processo legal.(citação).
 
 % ----------------------------------------------------------
 % Capitulo de Objetivos 
