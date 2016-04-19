@@ -3,18 +3,19 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \contentsline {chapter}{Sum\'ario}{2}{section*.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{3}{chapter.1}
+\contentsline {chapter}{\chapternumberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{3}{chapter.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Justificativa}}{4}{chapter.2}
+\contentsline {chapter}{\chapternumberline {2}Justificativa}{4}{chapter.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Objetivos}}{6}{chapter.3}
+\contentsline {chapter}{\chapternumberline {3}Objetivos}{6}{chapter.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Plano de Trabalho}}{7}{chapter.4}
+\contentsline {chapter}{\chapternumberline {4}Plano de Trabalho}{7}{chapter.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Material e M\IeC {\'e}todos}}{8}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}Material e M\IeC {\'e}todos}{8}{chapter.5}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {An\IeC {\'a}lise dos Resultados}}{9}{chapter.6}
-\vspace {\cftbeforechapterskip }
+\contentsline {chapter}{\chapternumberline {6}An\IeC {\'a}lise dos Resultados}{9}{chapter.6}
+\vspace {\cftbeforepartskip }
+\vspace {\cftbeforepartskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Refer\^encias}{10}{section*.5}
-\vspace {\cftbeforechapterskip }
+\contentsline {chapter}{Refer\^encias}{10}{section*.6}
+\vspace {\cftbeforepartskip }

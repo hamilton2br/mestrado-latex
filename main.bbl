@@ -1,0 +1,95 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9 }
+
+\bibitem[Aljaedi et al. 2011]{Aljaedi2011}
+\abntrefinfo{Aljaedi et al.}{ALJAEDI et al.}{2011}
+{ALJAEDI, A. et al. {Comparative Analysis of Volatile Memory Forensics}.
+\emph{IEEE International Conference on Privacy, Security, Risk and Trust
+  (PASSAT) and IEEE International Conference on Social Computing (SocialCom)},
+  p. 1253--1258, 2011.}
+
+\bibitem[Birk e Wegener 2011]{Birk2011}
+\abntrefinfo{Birk e Wegener}{BIRK; WEGENER}{2011}
+{BIRK, D.; WEGENER, C. {Technical Issues of Forensic Investigations in Cloud
+  Computing Environments}.
+\emph{2011 Sixth IEEE International Workshop on Systematic Approaches to
+  Digital Forensic Engineering}, p. 1--10, 2011.
+Dispon{\'\i}vel em:
+  \url{http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=6159124}.}
+
+\bibitem[Charters 2009]{Charters2009}
+\abntrefinfo{Charters}{CHARTERS}{2009}
+{CHARTERS, I. {The Evolution of Digital Forensics}.
+n. January, p. 1--39, 2009.}
+
+\bibitem[Dolan-Gavitt et al. 2011]{Dolan-Gavitt2011a}
+\abntrefinfo{Dolan-Gavitt et al.}{DOLAN-GAVITT et al.}{2011}
+{DOLAN-GAVITT, B. et al. {Virtuoso: Narrowing the semantic gap in virtual
+  machine introspection}.
+\emph{Proceedings - IEEE Symposium on Security and Privacy}, p. 297--312, 2011.
+ISSN 10816011.}
+
+\bibitem[Dykstra e Sherman 2012]{Dykstra2012a}
+\abntrefinfo{Dykstra e Sherman}{DYKSTRA; SHERMAN}{2012}
+{DYKSTRA, J.; SHERMAN, A.~T. {Acquiring forensic evidence from
+  infrastructure-as-a-service cloud computing: Exploring and evaluating tools,
+  trust, and techniques}.
+\emph{Digital Investigation}, Elsevier Ltd, v.~9, n. SUPPL., p. S90--S98, 2012.
+ISSN 17422876.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1016/j.diin.2012.05.001}.}
+
+\bibitem[Keyun et al. 2011]{Bash2015a}
+\abntrefinfo{Keyun et al.}{KEYUN et al.}{2011}
+{KEYUN, R. et al. \emph{{Advances in Digital Forensics IV}}. 7. ed. Orlando:
+  [s.n.], 2011. 35--46~p.
+ISSN 1098-6596.
+ISBN 9788578110796.}
+
+\bibitem[Paulo 2015]{cnbsp}
+\abntrefinfo{Paulo}{PAULO}{2015}
+{PAULO, C.~N. do B. S.~S. {Crimes Virtuais e Atas Notariais}.
+2015.}
+
+\bibitem[Quick e Choo 2014]{Quick2014}
+\abntrefinfo{Quick e Choo}{QUICK; CHOO}{2014}
+{QUICK, D.; CHOO, K. K.~R. {Impacts of increasing volume of digital forensic
+  data: A survey and future research challenges}.
+\emph{Digital Investigation}, Elsevier Ltd, v.~11, n.~4, p. 273--294, 2014.
+ISSN 17422876.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1016/j.diin.2014.09.002}.}
+
+\bibitem[Rahman e Khan 2015]{Rahman2015}
+\abntrefinfo{Rahman e Khan}{RAHMAN; KHAN}{2015}
+{RAHMAN, S.; KHAN, M. N.~A. {Review of live forensic analysis techniques}.
+\emph{International Journal of Hybrid Information Technology}, v.~8, n.~2, p.
+  379--388, 2015.
+Dispon{\'\i}vel em: \url{http://www.sersc.org/journals/IJHIT/}.}
+
+\bibitem[Sang 2013]{Sang2013}
+\abntrefinfo{Sang}{SANG}{2013}
+{SANG, T. {A log-based approach to make digital forensics easier on cloud
+  computing}.
+\emph{Proceedings of the 2013 3rd International Conference on Intelligent
+  System Design and Engineering Applications, ISDEA 2013}, p. 91--94, 2013.}
+
+\bibitem[Sharma e Sabharwal 2012]{Sharma2012}
+\abntrefinfo{Sharma e Sabharwal}{SHARMA; SABHARWAL}{2012}
+{SHARMA, H.; SABHARWAL, N. {Investigating the Implications of Virtual
+  Forensics}.
+\emph{Advances in Engineering, Science and Management (ICAESM), 2012
+  International Conference on}, p. 617--620, 2012.}
+
+\bibitem[Simou et al. 2014]{Simou2014}
+\abntrefinfo{Simou et al.}{SIMOU et al.}{2014}
+{SIMOU, S. et al. {Cloud forensics: Identifying the major issues and
+  challenges}.
+\emph{Lecture Notes in Computer Science (including subseries Lecture Notes in
+  Artificial Intelligence and Lecture Notes in Bioinformatics)}, v. 8484 LNCS,
+  p. 271--284, 2014.
+ISSN 16113349.}
+
+\end{thebibliography}

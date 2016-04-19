@@ -1,3 +1,32 @@
+%\title{Modelo de Projeto de pesquisa}
+%% abtex2-modelo-projeto-pesquisa.tex, v-1.9 laurocesar
+%% Copyright 2012-2013 by abnTeX2 group at http://abntex2.googlecode.com/ 
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is the abnTeX2 team, led
+%% by Lauro César Araujo. Further information are available on 
+%% http://abntex2.googlecode.com/
+%%
+%% This work consists of the files abntex2-modelo-projeto-pesquisa.tex
+%% and abntex2-modelo-references.bib
+%%
+
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% abnTeX2: Modelo de Projeto de pesquisa em conformidade com 
+% ABNT NBR 15287:2011 Informação e documentação - Projeto de pesquisa -
+% Apresentação 
+% ------------------------------------------------------------------------ 
+% ------------------------------------------------------------------------
 
 \documentclass[
 	% -- opções da classe memoir --
@@ -27,7 +56,7 @@
 \usepackage{lmodern}			% Usa a fonte Latin Modern
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
-\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada 
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
 \usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação
@@ -177,7 +206,7 @@ Científica em Engenharia de Computação.}
 % ----------------------------------------------------------
 \chapter{Introdução}
 
-Os crescentes avanços tecnológicos que têm ajudado a vida do ser humano também trouxeram diversos novos tipos de crimes relacionados a tecnologia da informação. (citacao)
+Os crescentes avanços tecnológicos que têm ajudado a vida do ser humano também trouxeram diversos novos tipos de crimes relacionados a tecnologia da informação \cite{cnbsp}.
 Quando do evento de um crime, há a necessidade de preservar as evidências de modo que apoiem processos legais e investigativos mas também para que possamos compreender a sequência
 de eventos envolvidos no ataque de modo a evitar que as mesmas vulnerabilidades sejam exploradas novamente.
 
@@ -185,37 +214,37 @@ de eventos envolvidos no ataque de modo a evitar que as mesmas vulnerabilidades 
 
 Forense Digital é uma ferramenta importante para a solução de crimes cometidos com um computador pela sua capacidade de reconstruir a cena de um crime a partir das evidências
 digitais deixadas por um ataque. A forense digital evoluiu nos últimos anos de uma fase ad hoc, passando por uma fase de adaptação aos requisitos legais até a era do ferramental
-avançado de coleta e análise (citação). Com o crescente uso de ferramentas online, virtualização e hospedagem em nuvem, o volume de dados gerado por esses sistemas que já era uma preocupação
-da comunidade forense em 2008 (citação), hoje começou a inviabilizar algumas de suas práticas (citação).  
+avançado de coleta e análise \cite{Charters2009} . Com o crescente uso de ferramentas online, virtualização e hospedagem em nuvem, o volume de dados gerado por esses sistemas que já era uma preocupação
+da comunidade forense em 2008 \cite{Simou2014}, hoje começou a inviabilizar algumas de suas práticas \cite{Sharma2012}.  
 
 \par
 
 Com a funcionalidade da elasticidade de carga ofertada pelos provedores de nuvem por meio da qual infraestrutura pode ser alocada e desalocada dinamicamente, veio à tona o problema
-da volatilidade dos dados nas máquinas virtuais. Com algumas ameaças que não deixam evidências em disco(citação), a memória de uma máquina despejada de um pool seria para sempre
-perdida. Com a máquina mais poderosa hoje ofertada pela Amazon tendo 240Gb de memória (citação), o ferramental forense disponível hoje esta pouco adaptado a desafios trazidos 
-pela nuvem (citação). A forense digital precisa evoluir.
+da volatilidade dos dados nas máquinas virtuais. Com algumas ameaças que não deixam evidências em disco \cite{Aljaedi2011}, a memória de uma máquina despejada de um pool seria para sempre
+perdida. Com a máquina mais poderosa hoje ofertada pela Amazon tendo 240Gb de memória, o ferramental forense disponível hoje esta pouco adaptado a desafios trazidos 
+pela nuvem \cite{Dykstra2012a}. A forense digital precisa evoluir.
 
 % ----------------------------------------------------------
 % Capitulo de justificativa 
 % ----------------------------------------------------------
 \chapter{Justificativa}
 
-A tecnologia hoje é parte de nossas vidas e também é parte da vida dos criminosos. O último crime registrado na America do Norte que não envolveu uma evidência digital data de 2011
-(citação), no Brasil só em 2015 houve um aumento de 87\% no registro de notas relacionadas a abusos ou crimes digitais (citação).
+A tecnologia hoje é parte de nossas vidas e também é parte da vida dos criminosos. O último crime registrado na America do Norte que não envolveu uma evidência digital data de 2011 \cite{Quick2014}
+, no Brasil só em 2015 houve um aumento de 87\% no registro de notas relacionadas a abusos ou crimes digitais \cite{cnbsp}.
 
 \par
 
 Do ponto de vista forense, praticantes e pesquisadores concordam que aspectos legais e o crescente volume de dados figuram entre as principais dificuldades trazidas pela computação 
-em nuvem (citação). A maioria das técnicas forenses atuais são da época pré-nuvem e algumas características da nuvem estão inviabilizando tais práticas. O aspecto multi inquilino 
+em nuvem \cite{Bash2015a}. A maioria das técnicas forenses atuais são da época pré-nuvem e algumas características da nuvem estão inviabilizando tais práticas. O aspecto multi inquilino 
 impede a remoção do hardware pois o mesmo é compartilhado com outros usários, removê-la seria uma violação da privacidade de usuários não relacionados a investigação. A característica
- distribuída pode alocar informação relevante à investigação em vários países dificultando a obtenção da mesma (citação). Por último, o crescente volume de dados envolvidos nas 
- aplicações atuais deram aos investigadores 6 a 12 meses de backlog de dados para investigar (citação), download de terabytes de dados para análise leva horas para ser realizado e 
- requer colaboração dos operadores de nuvem (citação). Mudar o paradigma de coleta de evidência tem sido proposto por pesquisadores e praticantes há alguns anos (citação), porém esta prática precisa 
+ distribuída pode alocar informação relevante à investigação em vários países dificultando a obtenção da mesma \cite{Dykstra2012a}. Por último, o crescente volume de dados envolvidos nas 
+ aplicações atuais deram aos investigadores 6 a 12 meses de backlog de dados para investigar \cite{Quick2014}, download de terabytes de dados para análise leva horas para ser realizado e 
+ requer colaboração dos operadores de nuvem. Mudar o paradigma de coleta de evidência tem sido proposto por pesquisadores e praticantes há alguns anos \cite{Birk2011}\cite{Sang2013} , porém esta prática precisa 
  submeter a legislação para que seja aceita em um processo legal.
 
 \par
 
-Por fim, a criatividade dos criminosos para explorar vulnerabilidades trouxe a tona ataques que não deixam evidências em disco, toda a operação ocorre em memória (citação). Com o 
+Por fim, a criatividade dos criminosos para explorar vulnerabilidades trouxe a tona ataques que não deixam evidências em disco, toda a operação ocorre em memória \cite{Rahman2015}. Com o 
 caráter elástico das soluções em nuvem, uma máquina despejada de um pool e cujos recursos foram reutilizados não pode mais prover as evidências necessárias para investigação criminal e 
 dependendo da importâcia da evidência o criminoso fica impune. Coletar a memória de processos de máquinas em nuvem de modo que sejam usadas com sucesso em um processo penal, sem 
 sobrecarregar ainda mais os investigadores é a principal justificativa desta pesquisa.
@@ -223,12 +252,12 @@ sobrecarregar ainda mais os investigadores é a principal justificativa desta pe
 \par
 
 A coleta de dados de memória não pode ser realizado diretamente de dentro da máquina virtual pois o próprio processo de leitura da memória a altera. A principal técnica de coleta
-de informações de memória é a Virtual Machine Introspection (citacao), nesta técnica a máquina é pausada e via hypervisor realiza-se a leitura da memória e em seguida a tradução dos 
+de informações de memória é a Virtual Machine Introspection , nesta técnica a máquina é pausada e via hypervisor realiza-se a leitura da memória e em seguida a tradução dos 
 endereços de memória virtual para o real. As desvantagens desta implementação estão na necessidade de tradução dos endereços de memória, para realização da análise e necessidade de 
-credenciais pra acesso e integração com o hypervisor. (citacao). No que tange o volume de dados baixados temos as técnicas da \textbf{Proof of retrieveability} 
-e \textbf{Proof of Data Possession} que se apoiam na transmissão e comparação de hashes gerados a partir do conteúdo que se quer coletar porém o uso destas requer
+credenciais pra acesso e integração com o hypervisor \cite{Dolan-Gavitt2011a}. No que tange o volume de dados baixados temos as técnicas da \textbf{Proof of retrieveability} 
+e \textbf{Proof of Data Possession} que se apoiam na transmissão e comparação de hashes gerados a partir do conteúdo que se quer coletar \cite{Birk2011} porém o uso destas requer
 quer a informação tenha baixa volatilidade o que não é o caso da informação contida em memória temporária. Na frente legal, as abordagens atuais de live forensics onde esta 
-pesquisa se concentra carecem de credibilidade por não produzirem evidências aceitas em um processo legal.(citação).
+pesquisa se concentra carecem de credibilidade por não produzirem evidências aceitas em um processo legal \cite{Rahman2015}.
 
 % ----------------------------------------------------------
 % Capitulo de Objetivos 
@@ -262,7 +291,6 @@ pesquisa se concentra carecem de credibilidade por não produzirem evidências a
  \end{itemize}
  
 \end{itemize}
-
 
 % ----------------------------------------------------------
 % Plano de Trabalho 
@@ -316,14 +344,17 @@ pesquisa se concentra carecem de credibilidade por não produzirem evidências a
  \end{itemize}
 
 \end{itemize}
-
-
 % ---
 % Finaliza a parte no bookmark do PDF
 % para que se inicie o bookmark na raiz
 % e adiciona espaço de parte no Sumário
 % ---
 \phantompart
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
 
 % ----------------------------------------------------------
 % Referências bibliográficas
