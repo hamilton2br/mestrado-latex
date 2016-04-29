@@ -1,0 +1,17 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9 }
+
+\bibitem[Simou et al. 2014]{Simou2014}
+\abntrefinfo{Simou et al.}{SIMOU et al.}{2014}
+{SIMOU, S. et al. {Cloud forensics: Identifying the major issues and
+  challenges}.
+\emph{Lecture Notes in Computer Science (including subseries Lecture Notes in
+  Artificial Intelligence and Lecture Notes in Bioinformatics)}, v. 8484 LNCS,
+  p. 271--284, 2014.
+ISSN 16113349.}
+
+\end{thebibliography}

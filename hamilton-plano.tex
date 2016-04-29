@@ -1,0 +1,338 @@
+% abnTeX2: Modelo de Trabalho Academico (tese de doutorado, dissertacao de
+% mestrado e trabalhos monograficos em geral) em conformidade com
+% ABNT NBR 14724:2011: Informacao e documentacao - Trabalhos academicos -
+% Apresentacao
+% ------------------------------------------------------------------------
+
+\documentclass[12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,			% twoside = para impressão em verso e anverso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+	]{abntex2}
+
+% ---
+% Pacotes básicos 
+% ---
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{lmodern}			% Usa a fonte Latin Modern			
+\usepackage{cmap}				% Mapear caracteres especiais no PDF - tcc cartrac
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+% ---	
+% \usepackage{lipsum}				% para geração de dummy text
+\usepackage{todonotes} 
+\usepackage{url} 
+% ---
+% Pacotes de citações
+% ---
+%\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+% --- 
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+%\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+%% Texto padrão antes do número das páginas
+%\renewcommand{\backref}{}
+%% Define os textos da citação
+%\renewcommand*{\backrefalt}[4]{
+%	\ifcase #1 %
+%		Nenhuma citação no texto.%
+%	\or
+%		Citado na página #2.%
+%	\else
+%		Citado #1 vezes nas páginas #2.%
+%	\fi}%
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Modelo de plano de pesquisa - PCS5012 - 2016/1}
+% baseada em redes definidas por software
+\autor{Hamilton Fonte II}
+\local{São Paulo}
+\data{2016}
+\instituicao{%
+  Universidade de São Paulo
+  \par
+  Escola Politécnica
+  \par
+  Departamento de Engenharia de Computação e Sistemas Digitais}
+\tipotrabalho{Plano de Pesquisa}
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+% \preambulo{Tese apresentada ao Departamento de Engenharia de Computa\c{c}\~ ao e Sistemas Digitais da Escola Polit\'ecnica da Universidade de S\~ao Paulo para obten\c{c}\~ ao do T\'{i}tulo de Livre Docente.}
+% ---
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+
+% Capa
+\imprimircapa
+
+% --- Folha de rosto
+% (o * indica que haverá a ficha bibliográfica)
+% \imprimirfolhaderosto*
+
+% ---
+% Inserir a ficha bibliografica
+
+% Isto é um exemplo de Ficha Catalográfica, ou ``Dados internacionais de
+% catalogação-na-publicação''. Você pode utilizar este modelo como referência. 
+% Porém, provavelmente a biblioteca da sua universidade lhe fornecerá um PDF
+% com a ficha catalográfica definitiva após a defesa do trabalho. Quando estiver
+% com o documento, salve-o como PDF no diretório do seu projeto e substitua todo
+% o conteúdo de implementação deste arquivo pelo comando abaixo:
+%
+% \begin{fichacatalografica}
+%     \includepdf{fig_ficha_catalografica.pdf}
+% \end{fichacatalografica}
+%\begin{fichacatalografica}
+%	\vspace*{\fill}					% Posição vertical
+%	\hrule							% Linha horizontal
+%	\begin{center}					% Minipage Centralizado
+%	\begin{minipage}[c]{12.5cm}		% Largura
+%	
+%	\imprimirautor
+%	
+%	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
+%	\imprimirlocal, \imprimirdata-
+%	
+%	\hspace{0.5cm} \pageref{LastPage} p. : \\ %il. (algumas color.) ; 30 cm.\\
+%	
+%	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
+%	
+%	\hspace{0.5cm}
+%	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
+%	\imprimirdata.}\\
+%	
+%	\hspace{0.5cm}
+%		1. Plano de Pesquisa.
+%		2. Modelo.
+%		3. PCS5012.
+%		I. Universidade de São Paulo. Escola Politécnica. Departamento de Engenharia
+%de Computação e Sistemas Digitais
+%		II. t.\\ 			
+%	
+%	\hspace{8.75cm} CDU 02:141:005.7\\
+%	
+%	\end{minipage}
+%	\end{center}
+%	\hrule
+%\end{fichacatalografica}
+% ---
+
+\pagebreak
+% ---
+% Dedicatória
+% ---
+%\begin{dedicatoria}
+%   \vspace*{\fill}
+%   \flushright
+%   \noindent
+%   \textit{``por que?'' é a pergunta mais importante. } 
+%   \vspace*{\fill}
+%\end{dedicatoria}
+% ---
+
+% ---
+% Agradecimentos
+% ---
+%\begin{agradecimentos}
+%
+%
+%\end{agradecimentos}
+% ---
+
+% ---
+% Epígrafe -- deveria ser relacionada a área do conhecimento
+% ---
+%\begin{epigrafe}
+%
+%\end{epigrafe}
+% ---
+
+% ---
+% RESUMOS
+% ---
+
+% resumo em português
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}
+Segundo a norma ABNT, o resumo deve ressaltar o  objetivo, o método, os resultados e as conclusões do documento.
+
+% \vspace{\onelineskip}
+ 
+%\noindent 
+%\textbf{Palavras-chaves}: 
+
+\end{resumo}
+
+% resumo em inglês
+%\begin{resumo}[Abstract]
+%\begin{otherlanguage*}{english}
+%
+% \vspace{\onelineskip}
+%  \noindent 
+%  \textbf{Key-words}: 
+%  
+% \end{otherlanguage*}
+%\end{resumo}
+
+
+% ---
+% inserir lista de ilustrações
+% ---
+%\pdfbookmark[0]{\listfigurename}{lof}
+%\listoffigures*
+%\cleardoublepage
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+%\pdfbookmark[0]{\listtablename}{lot}
+%\listoftables*
+%\cleardoublepage
+% ---
+
+% ---
+% inserir lista de abreviaturas e siglas
+% ---
+%\begin{siglas}
+%   \item[USP]    Universidade de São Paulo
+%\end{siglas}
+% ---
+
+%% ---
+%% inserir lista de símbolos
+%% ---
+%\begin{simbolos}
+%  \item[$ \Gamma $] Letra grega Gama
+%  \item[$ \Lambda $] Lambda
+%  \item[$ \zeta $] Letra grega minúscula zeta
+%  \item[$ \in $] Pertence
+%\end{simbolos}
+%% ---
+
+% ---
+% inserir o sumario
+% ---
+%\pdfbookmark[0]{\contentsname}{toc}
+%\tableofcontents*
+%\cleardoublepage
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Descrição do problema de pesquisa} \label{chap:intro}
+%\input{chap/01-intro}
+Enunciado preciso da questão ou problema \\
+Uso da bibliografia para identificar lacuna \\
+Por que é importante tratar essa questão?
+
+\chapter{Objetivos} \label{chap:obj}
+comporta uma hipótese
+
+\chapter{Método} \label{chap:metodo}
+informa como objetivo pode ser alcançado
+
+\chapter{Revisão bibliográfica} \label{chap:related}
+breve e focada em propostas similares e lacunas
+
+\chapter{Resultados esperados} \label{chap:result}
+o que muda no mundo quando se alcançar os objetivos?
+
+\bibliography{abntex2-modelo-references}
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+%  \bibliography{•}
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+\begin{comment}
+\printindex
+\end{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
