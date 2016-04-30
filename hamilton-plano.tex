@@ -227,6 +227,10 @@
 % resumo em português
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
+O objetivo é coletar dados de memória de processos em máquinas em núvem de modo que os mesmos sejam aceitos em um processo legal. Através de um método que visa \\
+associar os dados relacionados a máquina de onde eles saíram, de modo a ajudar a diminuir a quantidade de dados a ser analisada propondo uma mudança no paradigma \\
+da coleta assim fechando uma rota de fuga para criminosos escaparem pela via legal.
+
 Segundo a norma ABNT, o resumo deve ressaltar o  objetivo, o método, os resultados e as conclusões do documento.
 
 % \vspace{\onelineskip}
@@ -299,21 +303,39 @@ Segundo a norma ABNT, o resumo deve ressaltar o  objetivo, o método, os resulta
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Descrição do problema de pesquisa} \label{chap:intro}
 %\input{chap/01-intro}
-Enunciado preciso da questão ou problema \\
-Uso da bibliografia para identificar lacuna \\
-Por que é importante tratar essa questão?
+Utilização da nuvem para atos ilícitos. Com o crescimento da utilização da nuvem ilícitos tambem aumentam. Quando um ilícito acontece a forense tenta reconstruir a \\ 
+sequência de \cite{Rahman2015} eventos de modo a entender como ele ocorreu e mitigar as vulnerabilidades que permitiram a sua realização e a questão legal de apoio ao processo legal
+
+Boa parte da forense digital herdou práticas da forense tradicional. Dificultades das práticas forenses existentes para coletar evidência da nuvem por causa do carater \\
+multi inquilinato e multi jurisdição e elasticidade aliado a dificuldade de se ter uma evidência válida em um processo alíado a ameaças que não deixam rastros em disco.
+
+As soluções disponiveis até o momento estão focada mais no lado tecnológico do que no jurídico e a maioria focada na parte reativa da forense e poucas na parte preventiva. \\
+Muitas na completude da evidência do que. O volume de dados aumentando muito dificulta a analise cria um backlog imenso caráter volátil da nuvem leva a perda de informações \\
+importantes para o processo legal \cite{Sang2013} e investigativo.
 
 \chapter{Objetivos} \label{chap:obj}
-comporta uma hipótese
+Criar um mecanismo de coleta dados de memória volátil de uma máquina em nuvem de modo a que sejam aceitos em um processo forense.\\
+- Ser capa de reproduzir o processo independente da máquina existir ou não \\
+- A taxa de erro do processo ser conhecida. \\
+- Ser capaz de suportar a análise forense do incidente com no máximo 10\% da informação comparada com processos de coleta utilizados hoje.\\
+- Não violar a jurisdição de outros países
+- Não violar a privacidade de usuários da núvem não envolvidos na investigação. \\
 
 \chapter{Método} \label{chap:metodo}
-informa como objetivo pode ser alcançado
+Através de conteinerização, janela de dados e coleta fora do sistema de nuvem. Apresentar a evidência para um devogado, sei lá
 
 \chapter{Revisão bibliográfica} \label{chap:related}
-breve e focada em propostas similares e lacunas
+automated data acquisition in the cloud \\
+Digital forensics framework for a cloud environment \\
+Evidence and cloud computing the virtua machine introspection approach \\
+Design and implementation of FROST: FoRensic tools for Open STack \\
+Automated Forensic Data Acquisition in the cloud \\
+A log based approach to make digital forensics easier on cloud computing \\
+Volatile memory acquisitio using backup for forensic investigation \\
 
 \chapter{Resultados esperados} \label{chap:result}
-o que muda no mundo quando se alcançar os objetivos?
+Fechar uma das portas de fuga para criminosos na núvem hoje.Fornecer mais um mecanismo de coleta de dados para investigação. Propor uma mudança de paradigma da coleta de modo a \\
+diminuir a quantidade de informação que precisa de análise.
 
 \bibliography{abntex2-modelo-references}
 

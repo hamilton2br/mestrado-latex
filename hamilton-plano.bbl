@@ -5,13 +5,18 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9 }
 
-\bibitem[Simou et al. 2014]{Simou2014}
-\abntrefinfo{Simou et al.}{SIMOU et al.}{2014}
-{SIMOU, S. et al. {Cloud forensics: Identifying the major issues and
-  challenges}.
-\emph{Lecture Notes in Computer Science (including subseries Lecture Notes in
-  Artificial Intelligence and Lecture Notes in Bioinformatics)}, v. 8484 LNCS,
-  p. 271--284, 2014.
-ISSN 16113349.}
+\bibitem[Rahman e Khan 2015]{Rahman2015}
+\abntrefinfo{Rahman e Khan}{RAHMAN; KHAN}{2015}
+{RAHMAN, S.; KHAN, M. N.~A. {Review of live forensic analysis techniques}.
+\emph{International Journal of Hybrid Information Technology}, v.~8, n.~2, p.
+  379--388, 2015.
+Dispon{\'\i}vel em: \url{http://www.sersc.org/journals/IJHIT/}.}
+
+\bibitem[Sang 2013]{Sang2013}
+\abntrefinfo{Sang}{SANG}{2013}
+{SANG, T. {A log-based approach to make digital forensics easier on cloud
+  computing}.
+\emph{Proceedings of the 2013 3rd International Conference on Intelligent
+  System Design and Engineering Applications, ISDEA 2013}, p. 91--94, 2013.}
 
 \end{thebibliography}
