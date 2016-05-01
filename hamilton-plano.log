@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.10)  1 MAY 2016 00:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.10)  1 MAY 2016 11:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1293,36 +1293,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 329--336
 
 ]
 bibitemlist
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 27.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 25.
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )<<ot1.cmap>>
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 27.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 25.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )<<oml.cmap>>
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 27.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 25.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )<<oms.cmap>>
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 27.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 25.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 27.
+(Font)              <12> on input line 25.
 <<omx.cmap>>
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 27.
+(Font)              <8> on input line 25.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 27.
-)
+(Font)              <6> on input line 25.
 
+Overfull \hbox (18.09457pt too wide) in paragraph at lines 29--35
+\T1/lmr/m/n/12 (-20) researchpaper{%}5CExploring-[]Static-[]and-[]Live-[]Digita
+l-[]Forensic-[]Methods-[]Practices-[]and-[]Tools . 
+ []
+
+) 
 AED: lastpage setting LastPage
 [7
 
@@ -1339,10 +1344,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 361.
  ) 
 Here is how much of TeX's memory you used:
- 21039 strings out of 493304
- 357030 string characters out of 6139871
- 497255 words of memory out of 5000000
- 24023 multiletter control sequences out of 15000+600000
+ 21045 strings out of 493304
+ 357132 string characters out of 6139871
+ 498403 words of memory out of 5000000
+ 24028 multiletter control sequences out of 15000+600000
  45726 words of font info for 62 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  69i,12n,57p,449b,530s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1351,10 +1356,10 @@ public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on hamilton-plano.pdf (8 pages, 148110 bytes).
+Output written on hamilton-plano.pdf (8 pages, 150042 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
+ 138 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
  16985 words of extra memory for PDF output out of 17280 (max. 10000000)
 

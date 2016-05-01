@@ -303,19 +303,19 @@ Segundo a norma ABNT, o resumo deve ressaltar o  objetivo, o método, os resulta
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Descrição do problema de pesquisa} \label{chap:intro}
 %\input{chap/01-intro}
-Forense digital é um conjunto de técnicas de coleta e análise de evidências geradas por computadores e humanos que tem por objetivos, entender a sequência de eventos que permitiu que um 
-ataque fosse perpetrado, impedir que a vulnerabilidade que tornou possível um ataque seja utilizada novamente e apoiar um processo legal \cite{Sang2013}. A forense digital 
-cresceu a partir de técnicas usadas na forense tradicional, começou de forma ad-hoc, passou por uma fase de adaptação aos requisitos legais até a era de ferramental
+Forense digital é um conjunto de técnicas de coleta e análise de evidências geradas por computadores que tem por objetivos, entender a sequência de eventos que permitiu que um 
+ataque fosse perpetrado, impedir que a vulnerabilidade que tornou possível um ataque seja explorada novamente e apoiar um processo legal \cite{Sang2013}. A forense digital 
+cresceu a partir de técnicas usadas na forense tradicional. Começou de forma ad-hoc, passou por uma fase de adaptação aos requisitos legais até a era atual de ferramental
 avançado de coleta e análise \cite{Charters2009}. \\
 
-A utilização crescente de virtualização, ferramentas online e hospredagem em núvem, esta inviabilizando algumas práticas forenses \cite{Sharma2012}. Especificamente a 
-funcionalidade da elasticidade de carga ofertada pelos provedores de nuvem por meio da qual infraestrutura pode ser alocada e desalocada dinamicamente, trouxe o problema
-da volatilidade dos dados nas máquinas virtuais. Com algumas ameaças que não deixam evidências em disco \cite{Aljaedi2011}, a memória de uma máquina despejada de um pool 
-seria para sempre perdida, com ela evidências importantes. O ferramental forense disponível hoje esta pouco adaptado a desafios trazidos pela nuvem, focam em completude,
-resposta a incidente e raros geram evidências aceitaveis em um processo legal \cite{Reichert2015} \cite{Dykstra2012a}.
+A utilização crescente de virtualização, ferramentas online e hospredagem em núvem \cite{Amazon2016}, esta inviabilizando algumas práticas forenses \cite{Sharma2012}. 
+Especificamente a funcionalidade da elasticidade de carga ofertada pelos provedores de nuvem por meio da qual infraestrutura pode ser alocada e desalocada dinamicamente, 
+trouxe o problema da volatilidade dos dados nas máquinas virtuais. Com algumas ameaças que não deixam evidências em disco \cite{Rafique2013}, a memória de uma máquina 
+despejada de um pool seria para sempre perdida e com ela evidências importantes. O ferramental forense disponível hoje esta pouco adaptado a desafios trazidos pela nuvem \cite{Dykstra2012a}, 
+focam em completude, resposta a incidente e raros geram evidências aceitaveis em um processo legal \cite{Reichert2015}.
 
 \chapter{Objetivos} \label{chap:obj}
-Criar um mecanismo de coleta dados de memória volátil de uma máquina em nuvem de modo a que sejam aceitos em um processo forense.\\
+Criar um mecanismo de coleta dados de memória volátil de uma máquina em nuvem de modo a que sejam aceitos em um processo legal.\\
 - Ser capa de reproduzir o processo independente da máquina existir ou não \\
 - A taxa de erro do processo ser conhecida. \\
 - Ser capaz de suportar a análise forense do incidente com no máximo 10\% da informação comparada com processos de coleta utilizados hoje.\\

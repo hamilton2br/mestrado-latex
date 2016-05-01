@@ -5,12 +5,10 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9 }
 
-\bibitem[Aljaedi et al. 2011]{Aljaedi2011}
-\abntrefinfo{Aljaedi et al.}{ALJAEDI et al.}{2011}
-{ALJAEDI, A. et al. {Comparative Analysis of Volatile Memory Forensics}.
-\emph{IEEE International Conference on Privacy, Security, Risk and Trust
-  (PASSAT) and IEEE International Conference on Social Computing (SocialCom)},
-  p. 1253--1258, 2011.}
+\bibitem[Amazon 2016]{Amazon2016}
+\abntrefinfo{Amazon}{AMAZON}{2016}
+{AMAZON. \emph{{Amazon Media Room Press Release}}.
+[S.l.], 2016. 2~p.}
 
 \bibitem[Charters 2009]{Charters2009}
 \abntrefinfo{Charters}{CHARTERS}{2009}
@@ -25,6 +23,15 @@ n. January, p. 1--39, 2009.}
 \emph{Digital Investigation}, Elsevier Ltd, v.~9, n. SUPPL., p. S90--S98, 2012.
 ISSN 17422876.
 Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1016/j.diin.2012.05.001}.}
+
+\bibitem[Rafique e Khan 2013]{Rafique2013}
+\abntrefinfo{Rafique e Khan}{RAFIQUE; KHAN}{2013}
+{RAFIQUE, M.; KHAN, M. N.~A. {Exploring Static and Live Digital Forensics:
+  Methods, Practices and Tools}.
+\emph{International Journal of Scientific {\&} Engineering Research}, v.~4,
+  n.~10, p. 1048--1056, 2013.
+Dispon{\'\i}vel em:
+  \url{http://www.ijser.org/researchpaper{\%}5CExploring-Static-and-Live-Digital-Forensic-Methods-Practices-and-Tools.pdf}.}
 
 \bibitem[Reichert, Richards e Yoshigoe 2015]{Reichert2015}
 \abntrefinfo{Reichert, Richards e Yoshigoe}{REICHERT; RICHARDS; YOSHIGOE}{2015}
