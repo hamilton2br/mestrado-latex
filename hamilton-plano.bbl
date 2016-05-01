@@ -5,12 +5,33 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9 }
 
-\bibitem[Rahman e Khan 2015]{Rahman2015}
-\abntrefinfo{Rahman e Khan}{RAHMAN; KHAN}{2015}
-{RAHMAN, S.; KHAN, M. N.~A. {Review of live forensic analysis techniques}.
-\emph{International Journal of Hybrid Information Technology}, v.~8, n.~2, p.
-  379--388, 2015.
-Dispon{\'\i}vel em: \url{http://www.sersc.org/journals/IJHIT/}.}
+\bibitem[Aljaedi et al. 2011]{Aljaedi2011}
+\abntrefinfo{Aljaedi et al.}{ALJAEDI et al.}{2011}
+{ALJAEDI, A. et al. {Comparative Analysis of Volatile Memory Forensics}.
+\emph{IEEE International Conference on Privacy, Security, Risk and Trust
+  (PASSAT) and IEEE International Conference on Social Computing (SocialCom)},
+  p. 1253--1258, 2011.}
+
+\bibitem[Charters 2009]{Charters2009}
+\abntrefinfo{Charters}{CHARTERS}{2009}
+{CHARTERS, I. {The Evolution of Digital Forensics}.
+n. January, p. 1--39, 2009.}
+
+\bibitem[Dykstra e Sherman 2012]{Dykstra2012a}
+\abntrefinfo{Dykstra e Sherman}{DYKSTRA; SHERMAN}{2012}
+{DYKSTRA, J.; SHERMAN, A.~T. {Acquiring forensic evidence from
+  infrastructure-as-a-service cloud computing: Exploring and evaluating tools,
+  trust, and techniques}.
+\emph{Digital Investigation}, Elsevier Ltd, v.~9, n. SUPPL., p. S90--S98, 2012.
+ISSN 17422876.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1016/j.diin.2012.05.001}.}
+
+\bibitem[Reichert, Richards e Yoshigoe 2015]{Reichert2015}
+\abntrefinfo{Reichert, Richards e Yoshigoe}{REICHERT; RICHARDS; YOSHIGOE}{2015}
+{REICHERT, Z.; RICHARDS, K.; YOSHIGOE, K. {Automated forensic data acquisition
+  in the cloud}.
+\emph{Proceedings - 11th IEEE International Conference on Mobile Ad Hoc and
+  Sensor Systems, MASS 2014}, p. 725--730, 2015.}
 
 \bibitem[Sang 2013]{Sang2013}
 \abntrefinfo{Sang}{SANG}{2013}
@@ -18,5 +39,12 @@ Dispon{\'\i}vel em: \url{http://www.sersc.org/journals/IJHIT/}.}
   computing}.
 \emph{Proceedings of the 2013 3rd International Conference on Intelligent
   System Design and Engineering Applications, ISDEA 2013}, p. 91--94, 2013.}
+
+\bibitem[Sharma e Sabharwal 2012]{Sharma2012}
+\abntrefinfo{Sharma e Sabharwal}{SHARMA; SABHARWAL}{2012}
+{SHARMA, H.; SABHARWAL, N. {Investigating the Implications of Virtual
+  Forensics}.
+\emph{Advances in Engineering, Science and Management (ICAESM), 2012
+  International Conference on}, p. 617--620, 2012.}
 
 \end{thebibliography}
