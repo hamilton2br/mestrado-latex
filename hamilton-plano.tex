@@ -306,21 +306,40 @@ Segundo a norma ABNT, o resumo deve ressaltar o  objetivo, o método, os resulta
 Forense digital é um conjunto de técnicas de coleta e análise de evidências geradas por computadores que tem por objetivos, entender a sequência de eventos que permitiu que um 
 ataque fosse perpetrado, impedir que a vulnerabilidade que tornou possível um ataque seja explorada novamente e apoiar um processo legal \cite{Sang2013}. A forense digital 
 cresceu a partir de técnicas usadas na forense tradicional. Começou de forma ad-hoc, passou por uma fase de adaptação aos requisitos legais até a era atual de ferramental
-avançado de coleta e análise \cite{Charters2009}. \\
+avançado de coleta e análise \cite{Charters2009}.
 
 A utilização crescente de virtualização, ferramentas online e hospredagem em núvem \cite{Amazon2016}, esta inviabilizando algumas práticas forenses \cite{Sharma2012}. 
 Especificamente a funcionalidade da elasticidade de carga ofertada pelos provedores de nuvem por meio da qual infraestrutura pode ser alocada e desalocada dinamicamente, 
 trouxe o problema da volatilidade dos dados nas máquinas virtuais. Com algumas ameaças que não deixam evidências em disco \cite{Rafique2013}, a memória de uma máquina 
-despejada de um pool seria para sempre perdida e com ela evidências importantes. O ferramental forense disponível hoje esta pouco adaptado a desafios trazidos pela nuvem \cite{Dykstra2012a}, 
-focam em completude, resposta a incidente e raros geram evidências aceitaveis em um processo legal \cite{Reichert2015}.
+despejada de um pool seria para sempre perdida e com ela evidências importantes. O simples armazenamento do conteúdo da memória não satisfaz o princípio de Daubert. 
+A abordagem de armazenar constantemente todas as alterações na memória não contribui para a solução do crescente backlog de dados que os investigadores tem para
+analizar \cite{Quick2014}. O ferramental forense disponível hoje esta pouco adaptado a desafios trazidos pela nuvem \cite{Dykstra2012a}, focam em completude, resposta a 
+incidente e raros geram evidências aceitaveis em um processo legal \cite{Reichert2015}. \\
+
+A solução deste problema passa pela confirmação das seguintes hipóteses:
+
+\begin{enumerate}
+ \item É possível associar um conjunto de dados de memória coletados a uma máquina e um processo específico na núvem.
+ \item É possível conseguir o mesmo resultado da coleta mesmo se a máquina e o processo de origem não existirem mais.
+ \item Não é necessário todo os histórico de alterações da memória para a análise do incidente.
+ \item É possível coletar as informações da memória sem a cooperação do provedor de núvem.
+\end{enumerate}
+
+Essa pesquisa se justifica pela necessidade da forense em se adaptar a computação em nuvem. Não ser capaz de levantar evidências impede investigações, prisão de criminosos e 
+correção de vulnerabilidades. Tal cenário é um convite a criminalidade e garantia de impunidade.
 
 \chapter{Objetivos} \label{chap:obj}
-Criar um mecanismo de coleta dados de memória volátil de uma máquina em nuvem de modo a que sejam aceitos em um processo legal.\\
-- Ser capa de reproduzir o processo independente da máquina existir ou não \\
-- A taxa de erro do processo ser conhecida. \\
-- Ser capaz de suportar a análise forense do incidente com no máximo 10\% da informação comparada com processos de coleta utilizados hoje.\\
-- Não violar a jurisdição de outros países
-- Não violar a privacidade de usuários da núvem não envolvidos na investigação. \\
+O princípio de Daubert é uma norma da lei Norte-Americana que versa sobre a admissibilidade de evidências oriundas do trabalho de peritos em um processo legal. Pertinentes a
+esta pesquisa estão a obrigatoriedade em garantir que as provas não foram comprometidas ou alteradas durante o processo de coleta, a reprodutibilidade do processo e
+por fim conhecer sua taxa de erro. Sendo assim, o objetivo principal deste projeto é provar que é possível coletar de dados de memória de processos em 
+máquinas na nuvem de modo que estes se submetam com sucesso a parte cabível do Princípio de Daubert. Para alcançar este objetivo, os seguintes subobjetivos precisam ser alcançados:
+
+\begin{enumerate}
+ \item Conseguir reproduzir o processo de coleta mesmo se a máquina de onde se originaram os dados tiver sido despejada.
+ \item Conseguir realizar análise de um incidente com no máximo 10\% da informação de memória resultantes de processos de coleta existentes hoje.
+ \item Conseguir realizar a coleta sem violar jurisdição e privacidade de usuários não relacionados a investigação.
+ \item Conhecer a taxa de erro relacionada ao processo.
+\end{enumerate}
 
 \chapter{Método} \label{chap:metodo}
 Através de conteinerização, janela de dados e coleta fora do sistema de nuvem. Apresentar a evidência para um devogado, sei lá
