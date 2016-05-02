@@ -6,7 +6,49 @@
 
 
 %% Saved with string encoding Unicode (UTF-8) 
-
+@article{Dezfouli2012,
+abstract = {Nowadays mobile phones are used all over the world for the communication purposes. The capabilities of these devices are improved during the past few years. Due to their capabilities, mobile devices are used broadly in criminal activities especially in cybercrime. The volatile data stored in mobile phones usually contain important evidences regarding the crime. However, collecting these volatile data in a forensically sound manner would not be easy. This paper proposes a new approach for acquiring the volatile data inside a mobile phone in a forensically sound manner that minimizes the chance of evidence modification or lost.},
+author = {Dezfouli, Farhood Norouzizadeh and Dehghantanha, Ali and Mahmoud, Ramlan and {Binti Mohd Sani}, Nor Fazlida and {Bin Shamsuddin}, Solahuddin},
+doi = {10.1109/CyberSec.2012.6246108},
+file = {:home/hamilton/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Dezfouli et al. - 2012 - Volatile memory acquisition using backup for forensic investigation.pdf:pdf},
+isbn = {9781467314251},
+journal = {Proceedings 2012 International Conference on Cyber Security, Cyber Warfare and Digital Forensic, CyberSec 2012},
+keywords = {backup,digital forensics,mobile phone forensics,mobile phone investigation,volatile data},
+pages = {186--189},
+title = {{Volatile memory acquisition using backup for forensic investigation}},
+year = {2012}
+}
+@article{Dykstra2013,
+abstract = {We describe the design, implementation, and evaluation of FROST - three new forensic tools for the OpenStack cloud platform. Our implementation for the OpenStack cloud platform supports an Infrastructure-as-a-Service (IaaS) cloud and provides trustworthy forensic acquisition of virtual disks, API logs, and guest firewall logs. Unlike traditional acquisition tools, FROST works at the cloud management plane rather than interacting with the operating system inside the guest virtual machines, thereby requiring no trust in the guest machine. We assume trust in the cloud provider, but FROST overcomes non-trivial challenges of remote evidence integrity by storing log data in hash trees and returning evidence with cryptographic hashes. Our tools are user-driven, allowing customers, forensic examiners, and law enforcement to conduct investigations without necessitating interaction with the cloud provider. We demonstrate how FROST's new features enable forensic investigators to obtain forensically-sound data from OpenStack clouds independent of provider interaction. Our preliminary evaluation indicates the ability of our approach to scale in a dynamic cloud environment. The design supports an extensible set of forensic objectives, including the future addition of other data preservation, discovery, real-time monitoring, metrics, auditing, and acquisition capabilities. ?? 2013 Josiah Dykstra and Alan T. Sherman. Published by Elsevier Ltd. All rights reserved.},
+author = {Dykstra, Josiah and Sherman, Alan T.},
+doi = {10.1016/j.diin.2013.06.010},
+file = {:home/hamilton/host/Bibliografia/DEsign and implementation of FROST.pdf:pdf},
+isbn = {1742-2876},
+issn = {17422876},
+journal = {Digital Investigation},
+keywords = {Cloud computing,Cloud forensics,Digital forensics,FROST,OpenStack},
+number = {SUPPL.},
+pages = {S87--S95},
+publisher = {Elsevier Ltd},
+title = {{Design and implementation of FROST: Digital forensic tools for the OpenStack cloud computing platform}},
+url = {http://dx.doi.org/10.1016/j.diin.2013.06.010},
+volume = {10},
+year = {2013}
+}
+@article{Poisel2013,
+abstract = {Cloud forensics refers to digital forensics investigations performed in cloud computing environments. Nowadays digital investigators face various technical, legal, and organizational challenges to keep up with current developments in the field of cloud computing. But, due to its dynamic nature, cloud computing also offers several opportunities to improve digital investigations in cloud environments. The enormous available computing power can be leveraged to process massive amounts of information in order to extract relevant evidence. In the first part of this paper we focus on the current state-of-the-art of affected fields of cloud forensics. The benefit for the reader of this paper is therefore a clear overview of the challenges and opportunities for scientific developments in the field of cloud forensics. As this paper represents an extended version of our paper presented at the ARES 2012 conference, we describe digital forensics investigations at the hypervisor level of virtualized environments in greater detail. cloud computing setups typically consist of several virtualized computer systems. Therefore we introduce the reader to the topic of evidence correlation within cloud computing infrastructures.},
+author = {Poisel, R and Malzer, E and Tjoa, S},
+file = {:home/hamilton/host/Bibliografia/Evidence and Cloud Computing- The Virtual Machine Introspection Approach.pdf:pdf},
+issn = {20935374 (ISSN)},
+journal = {Journal of Wireless Mobile Networks, Ubiquitous Computing, and Dependable Applications},
+keywords = {Cloud computing,Cloud forensics,Digital forensics,Evidence correlation,Hypervisor forensics},
+number = {1},
+pages = {135--152},
+title = {{Evidence and cloud computing: The virtual machine introspection approach}},
+url = {http://www.scopus.com/inward/record.url?eid=2-s2.0-84885399460{\&}partnerID=40{\&}md5=0e332690d4cb1f01934b540b535fd771},
+volume = {4},
+year = {2013}
+}
 @techreport{Do2014,
 abstract = {This paper presents the theoretical foundation of computer forensics, concepts, stages of an investigation, procedures and tools used by experts to investigate a cybercrime. Also addresses the issue cloud computing, the concepts, features, models and providers. Finally, we show a case study to verify the contents of files available for cloud storage providers are changed during the process of uploading, storage, and downloading. For this study the following procedures were adopted: Literature to filter quality materials produced by leading professionals in review; After choosing literature, several searches were done on websites for additional information, such as articles published in international databases and conferences in the area; Survey of the main techniques and tools used by forensic experts to analyze data in digital crimes; For the case study three accounts were created at different providers of services (Dropbox, Google Drive and OneDrive), data were collected manually through a browser and client software, both running in a virtual machine. Finally, it was found that the process of performing the download of files does not affect the contents of the same, since the MD5 hash values of downloaded files were the same as the original files. Because the files were transferred from one storage location to another, the information date and time may be changed, but the content of the files remained intact.},
 author = {Barbara, Damacena},
@@ -186,14 +228,15 @@ url = {http://dx.doi.org/10.1016/j.diin.2012.05.001},
 volume = {9},
 year = {2012}
 }
-@article{Charters2009,
+@inproceedings{Charters2008,
 abstract = {This document is based on a paper that I wrote and delivered at NIST‟s Techno Forensics 2008 Conference, on 27 October, 2008 (http://www.thetrainingco.com/html/AgendaForensic08.html). That paper was called, Digital Forensics: The “No Escape” Zone. Some time ago I was thinking about the evolution of various aspects of computer security. One of the ideas that occurred to me was that by looking at the way forensics evolved in the past, with an eye to the pressures that guided its evolution, we could get a better understanding of how forensics would evolve in the near future},
-author = {Charters, Ian},
-file = {:home/hamilton/host/Bibliografia/the evolution of digital forensics ian charters.pdf:pdf},
-number = {January},
+author = {Charters, Ian and Smith, Mike and McKee, Graydon},
+booktitle = {Techno Forensics 2008 Conference},
+file = {:home/hamilton/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Charters - 2009 - The Evolution of Digital Forensics.pdf:pdf},
+number = {October},
 pages = {1--39},
 title = {{The Evolution of Digital Forensics}},
-year = {2009}
+year = {2008}
 }
 @article{Dolan-Gavitt2011a,
 abstract = {Introspection has featured prominently in many recent security solutions, such as virtual machine-based intrusion detection, forensic memory analysis, and low-artifact malware analysis. Widespread adoption of these approaches, however, has been hampered by the semantic gap: in order to extract meaningful information about the current state of a virtual machine, detailed knowledge of the guest operating system's inner workings is required. In this paper, we present a novel approach for automatically creating introspection tools for security applications with minimal human effort. By analyzing dynamic traces of small, in-guest programs that compute the desired introspection information, we can produce new programs that retrieve the same information from outside the guest virtual machine. We demonstrate the efficacy of our techniques by automatically generating 17 programs that retrieve security information across 3 different operating systems, and show that their functionality is unaffected by the compromise of the guest system. Our technique allows introspection tools to be effortlessly generated for multiple platforms, and enables the development of rich introspection-based security applications.},

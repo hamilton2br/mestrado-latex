@@ -10,10 +10,17 @@
 {AMAZON. \emph{{Amazon Media Room Press Release}}.
 [S.l.], 2016. 2~p.}
 
-\bibitem[Charters 2009]{Charters2009}
-\abntrefinfo{Charters}{CHARTERS}{2009}
-{CHARTERS, I. {The Evolution of Digital Forensics}.
-n. January, p. 1--39, 2009.}
+\bibitem[Charters, Smith e McKee 2008]{Charters2008}
+\abntrefinfo{Charters, Smith e McKee}{CHARTERS; SMITH; MCKEE}{2008}
+{CHARTERS, I.; SMITH, M.; MCKEE, G. {The Evolution of Digital Forensics}. In:
+  \emph{Techno Forensics 2008 Conference}. [S.l.: s.n.], 2008. p. 1--39.}
+
+\bibitem[Dezfouli et al. 2012]{Dezfouli2012}
+\abntrefinfo{Dezfouli et al.}{DEZFOULI et al.}{2012}
+{DEZFOULI, F.~N. et al. {Volatile memory acquisition using backup for forensic
+  investigation}.
+\emph{Proceedings 2012 International Conference on Cyber Security, Cyber
+  Warfare and Digital Forensic, CyberSec 2012}, p. 186--189, 2012.}
 
 \bibitem[Dykstra e Sherman 2012]{Dykstra2012a}
 \abntrefinfo{Dykstra e Sherman}{DYKSTRA; SHERMAN}{2012}
@@ -23,6 +30,31 @@ n. January, p. 1--39, 2009.}
 \emph{Digital Investigation}, Elsevier Ltd, v.~9, n. SUPPL., p. S90--S98, 2012.
 ISSN 17422876.
 Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1016/j.diin.2012.05.001}.}
+
+\bibitem[Dykstra e Sherman 2013]{Dykstra2013}
+\abntrefinfo{Dykstra e Sherman}{DYKSTRA; SHERMAN}{2013}
+{DYKSTRA, J.; SHERMAN, A.~T. {Design and implementation of FROST: Digital
+  forensic tools for the OpenStack cloud computing platform}.
+\emph{Digital Investigation}, Elsevier Ltd, v.~10, n. SUPPL., p. S87--S95,
+  2013.
+ISSN 17422876.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1016/j.diin.2013.06.010}.}
+
+\bibitem[George, Venter e Thomas 2012]{George2012}
+\abntrefinfo{George, Venter e Thomas}{GEORGE; VENTER; THOMAS}{2012}
+{GEORGE, S.; VENTER, H.; THOMAS, F. {Digital Forensic Framework for a Cloud
+  Environment}.
+p.~1--8, 2012.}
+
+\bibitem[Poisel, Malzer e Tjoa 2013]{Poisel2013}
+\abntrefinfo{Poisel, Malzer e Tjoa}{POISEL; MALZER; TJOA}{2013}
+{POISEL, R.; MALZER, E.; TJOA, S. {Evidence and cloud computing: The virtual
+  machine introspection approach}.
+\emph{Journal of Wireless Mobile Networks, Ubiquitous Computing, and Dependable
+  Applications}, v.~4, n.~1, p. 135--152, 2013.
+ISSN 20935374 (ISSN).
+Dispon{\'\i}vel em:
+  \url{http://www.scopus.com/inward/record.url?eid=2-s2.0-84885399460{\&}partnerID=40{\&}md5=0e332690d4cb1f01934b540b535fd771}.}
 
 \bibitem[Quick e Choo 2014]{Quick2014}
 \abntrefinfo{Quick e Choo}{QUICK; CHOO}{2014}
