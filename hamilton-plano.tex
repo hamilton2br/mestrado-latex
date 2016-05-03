@@ -344,33 +344,36 @@ Através de conteinerização, janela de dados e coleta fora do sistema de nuvem
 
 \chapter{Revisão bibliográfica} \label{chap:related}
 \begin{itemize}
- \item \textbf{Automated Forensic Data Acquisition in the Cloud \cite{Reichert2015} }: Propoe um modelo de coleta de dados de máquinas virtuais, o processo é acionado 
- na detecção de uma ameaça e usa o Google Rapid Response framework para salvar as informações coletadas fora da núvem de forma a driblar os problemas de multi-jurisdição e multi-inquilinado.\\
- O modelo proposto não cobre o cenário em que uma máquina é despejada do pool e os recursos desalocados e não explica como vai manter a cadeia de custódia da evidência apenas menciona que
- a coleta será realizada pelo Google Rapid Response.
+ \item \textbf{Automated Forensic Data Acquisition in the Cloud \cite{Reichert2015} }: Propõe um modelo de coleta de dados de máquinas virtuais acionado por um sistema de 
+ detecção de ameaça. Usa o Google Rapid Response para salvar as informações coletadas fora da núvem de forma a driblar os problemas de multi-jurisdição e multi-inquilino.\\
+ O modelo proposto não cobre o cenário em que uma máquina é despejada do pool e seus recursos liberados após a detecção da ameaça e não explica como vai manter a cadeia de 
+ custódia da evidência.
  \item \textbf{Digital forensics framework for a cloud environment \cite{George2012} }: Framework para coleta de dados de máquinas virtuais e associa-las aos usuários da 
- núvem. Tem inteligência para recorrer a própria núvem para armazenar os dados coletados.\\
- O framework proposto não cobre o cenário em que uma máquina é despejada do pool e os recursos desalocados, é focado no usuário e não no hardware e leva algum tempo para
- identificar os usuários envolvidos. Usando a núvem para armazenar os dados coletados ele depende de cooperação do provedor de núvem para obter tais dados.
+ núvem. Usa a estratégia de armazenar tudo para evitar perda de informação decorrente do despejo de uma máquina do pool e desalocação de seus recursos. Armazena os dados coletados
+ na própria nuvem.\\
+ O framework proposto, apesar de cobrir o cenário em que uma máquina é despejada do pool e os recursos liberados, não dá detalhes o suficiente para demonstrar que consegue 
+ reproduzir o processo e obter o mesmo resultado. É focado no usuário e não no hardware e leva algum tempo para identificar os usuários envolvidos. Usando a própria núvem para 
+ armazenar os dados coletados ele depende de cooperação do provedor de núvem para obter tais dados.
  \item \textbf{Evidence and cloud computing the virtual machine introspection approach \cite{Poisel2013} }: Descreve o processo de coleta de informações de máquinas
- em núvem através da técnica de introspecção em máquina virtual, onde se acessa os dados das máquinas virtuais através do hypervisor, propõe que o processo seja disparado por demanda.\\
+ em núvem através da técnica de introspecção em máquina virtual, onde se acessa os dados das máquinas virtuais através do hypervisor. Propõe que o processo seja disparado 
+ por demanda atrelado a um sistema de detecção de ameaça ou intervenção humana.\\
  A técnica descrita cobre apenas o processo de coleta de informações. No que tange as informações de memória, como os endereços de memória são os do host, estes precisam ser traduzidos
- para que a análise forense seja feita. A abordagem não tem conhecimento do que esta rodando dentro da máquina virtual, copiando bit a bit aquilo que encontra. Embora pareça
- possível, não descreve como lida com o cenário onde uma máquina é despejada do pool e os recursos desalocados.
+ para que a análise forense seja feita. Como a abordagem não tem conhecimento do que esta rodando dentro da máquina virtual precisa de uma copia bit a bit da evidência. Embora pareça
+ possível, não descreve como lida com o cenário onde uma máquina é despejada do pool e os recursos liberados.
  \item \textbf{Design and implementation of FROST: FoRensic tools for Open STack \cite{Dykstra2013} }: Framework para coleta de dados de máquinas virtuais através da API do 
- hypervisor. É a aplicação de técnicas reconhecidas atualmente para coleta de dados, é capaz de isolar uma máquina virtual do pool original para realização da coleta. Precisa 
+ hypervisor, usa técnicas reconhecidas atualmente para coleta e armazenamento dos dados. Isola a máquina virtual afetada do pool original para realização da coleta. Precisa 
  ser acionado quando uma ameaça é detectada.\\
- O framework proposto não cobre o cenário em que uma máquina é despejada do pool e os recursos desalocados. Não conhece o que esta rodando na máquina virtual, tem acesso apenas as
- informações que são disponibilizadas pela API do hypervisor e não explica como vai manter a cadeia de custódia.
+ O framework proposto não cobre o cenário em que uma máquina é despejada do pool e os recursos liberados após a detecção da ameaça. Não conhece o que esta rodando na máquina 
+ virtual, tem acesso apenas as informações que são disponibilizadas pela API do hypervisor e não explica como vai manter a cadeia de custódia.
  \item \textbf{A log based approach to make digital forensics easier on cloud computing \cite{Sang2013} }: Método que sugere salvar a informação coletada fora da núvem de modo a driblar
- os problemas de multi-inquilinato e multi-jurisdição, usa um hash para garantir a autenticidade e integridade da informação mas não dá detalhes da implementação. Dá exemplos de
- como funcionaria em PaaS e SaaS.\\
- Segundo o próprio autor, o método não funciona em IaaS. Ele depende de cooperação do provedor de nuvem pois depende que este último decida quais informações serão adicionadas ao log.
+ os problemas de multi-inquilinato e multi-jurisdição, usa um mecanismo de hash para garantir a autenticidade e integridade da informação mas não dá detalhes da implementação. 
+ Dá exemplos de como funcionaria em PaaS e SaaS.\\
+ Segundo o próprio autor, o método não funciona em IaaS. Precisa da cooperação do provedor de nuvem pois depende que este último decida quais informações serão adicionadas ao log.
  O método não é aplicável a coleta de informações de memória.
 \item \textbf{Volatile memory acquisition using backup for forensic investigation \cite{Dezfouli2012} }: Técnica que sugere a utilização da própria máquina
 como repositório de informações de memória volátil, para manter a utilização de espaço ao mínimo sugere manter apenas o último estado conhecido de cada processo.\\
-A técnica não cobre o cenário em que uma máquina é despejada do pool e seus recursos são reutilizados, de fato, esta técnica provocaria a perda de todas as evidências caso a desalo
-cação de recursos ocorra.
+A técnica não cobre o cenário em que uma máquina é despejada do pool e seus recursos são reutilizados, de fato, esta técnica provocaria a perda de todas as evidências caso a 
+liberação de recursos da máquina ocorra.
 \end{itemize}
 
 \chapter{Resultados esperados} \label{chap:result}
