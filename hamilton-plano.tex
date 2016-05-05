@@ -227,11 +227,10 @@
 % resumo em português
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
-O objetivo é coletar dados de memória de processos em máquinas em núvem de modo que os mesmos sejam aceitos em um processo legal. Através de um método que visa \\
-associar os dados relacionados a máquina de onde eles saíram, de modo a ajudar a diminuir a quantidade de dados a ser analisada propondo uma mudança no paradigma \\
-da coleta assim fechando uma rota de fuga para criminosos escaparem pela via legal.
-
-Segundo a norma ABNT, o resumo deve ressaltar o  objetivo, o método, os resultados e as conclusões do documento.
+Esta pesquisa vai demonstrar que as abordagens para realização de análise forense de memória volátil em nuvem disponíveis hoje não lidam com as características elásticas, 
+multi-inquilino e multi-jurisdição de forma satisfatória. Esperamos comprovar através da implementação de um arcabouço de coleta de informações de memória, que a solução
+esta em uma mudança na abordagem da coleta e armazenamento da evidência. Tendo êxito daremos um passo para a solução dos dois maiores problemas hoje na forense em núvem, 
+volume de dados e conformidade com requisitos juridicos.
 
 % \vspace{\onelineskip}
  
@@ -304,9 +303,9 @@ Segundo a norma ABNT, o resumo deve ressaltar o  objetivo, o método, os resulta
 \chapter{Descrição do problema de pesquisa} \label{chap:intro}
 %\input{chap/01-intro}
 Forense digital é um conjunto de técnicas de coleta e análise de evidências geradas por computadores que tem por objetivos, entender a sequência de eventos que permitiu que um 
-ataque fosse perpetrado, impedir que a vulnerabilidade que tornou possível um ataque seja explorada novamente e apoiar um processo legal \cite{Sang2013}. A forense digital 
-cresceu a partir de técnicas usadas na forense tradicional. Começou de forma ad-hoc, passou por uma fase de adaptação aos requisitos legais até a era atual de ferramental
-avançado de coleta e análise \cite{Charters2008}.
+ataque fosse perpetrado, impedir que a vulnerabilidade que tornou possível o ataque seja explorada novamente e apoiar um processo legal para levar os culpados a prisão \cite{Sang2013}. 
+A forense digital cresceu a partir de técnicas usadas na forense tradicional. Começou de forma artesanal, passou por uma fase de adaptação aos requisitos legais até a era atual
+de ferramental avançado de coleta e análise \cite{Charters2008}.
 
 A utilização crescente de virtualização, ferramentas online e hospredagem em núvem \cite{Amazon2016}, esta inviabilizando algumas práticas forenses \cite{Sharma2012}. 
 Especificamente a funcionalidade da elasticidade de carga ofertada pelos provedores de nuvem por meio da qual infraestrutura pode ser alocada e desalocada dinamicamente, 
@@ -340,7 +339,31 @@ máquinas na nuvem de modo que estes se submetam com sucesso a parte cabível do
 \end{enumerate}
 
 \chapter{Método} \label{chap:metodo}
-Através de conteinerização, janela de dados e coleta fora do sistema de nuvem. Apresentar a evidência para um devogado, sei lá
+\begin{enumerate}
+ \item Desenvolver uma aplicação de coleta de informações de memória em núvem de modo que se consiga relacionar a mesma a sua origem e que
+o processo seja repetível. Este estudo será realizado em máquinas virtuais rodando sistemas operacionais windows e linux. A verificação do funcionamento correto será feita 
+da seguinte forma:
+
+\begin{enumerate}
+ \item Realizar a primeira coleta.
+ \item Despejar a máquina virtual do pool e liberar seus recursos.
+ \item Recriar a máquina e executar o processo de coleta novamente.
+ \item Mensurar a diferença entre as coletas através de comparação simples e guardar o percentual de diferença.
+ \item Repetir os passos (b), (c) e (d) até <limite>.
+\end{enumerate}
+
+\item Desenvolver e documentar um arcabouço de armazenamento dos dados que garanta a cadeia de custódia da evidència guardando dados o suficiente para 
+conseguir distinguir o momento anterior ao ataque.
+
+\item Entrevistar analistas forenses e juizes. Apresenta-los o arcabouço de armazenamento e coletar opiniões sobre a aceitabilidade do mesmo.
+
+\item Entrevistar analistas forenses e luizes. Apresenta-los a estratégia de armazenamento mínimo e coletar opiniões sobre a aceitabilidade do mesmo. 
+
+\item Publicar resultados.
+
+\item Escrita e defesa de tese.
+
+\end{enumerate}
 
 \chapter{Revisão bibliográfica} \label{chap:related}
 \begin{itemize}
