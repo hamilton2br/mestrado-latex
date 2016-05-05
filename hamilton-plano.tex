@@ -303,31 +303,33 @@ volume de dados e conformidade com requisitos juridicos.
 \chapter{Descrição do problema de pesquisa} \label{chap:intro}
 %\input{chap/01-intro}
 Forense digital é um conjunto de técnicas de coleta e análise de evidências geradas por computadores que tem por objetivos, entender a sequência de eventos que permitiu que um 
-ataque fosse perpetrado, impedir que a vulnerabilidade que tornou possível o ataque seja explorada novamente e apoiar um processo legal para levar os culpados a prisão \cite{Sang2013}. 
+ataque ocorresse, impedir que a vulnerabilidade que tornou possível o ataque seja explorada novamente e apoiar os processo jurídicos que visam submeter os culpados as punições
+previstas na lei \cite{Sang2013}. 
 A forense digital cresceu a partir de técnicas usadas na forense tradicional. Começou de forma artesanal, passou por uma fase de adaptação aos requisitos legais até a era atual
 de ferramental avançado de coleta e análise \cite{Charters2008}.
 
 A utilização crescente de virtualização, ferramentas online e hospedagem em nuvem \cite{Amazon2016}, esta criando dificuldades para a coleta de informações, análise e utilização 
-em processos legais \cite{Sharma2012}. Especificamente a funcionalidade da elasticidade de carga ofertada pelos provedores de nuvem por meio da qual infraestrutura pode ser 
+em processos legais \cite{Sharma2012}. A funcionalidade da elasticidade de carga ofertada pelos provedores de nuvem por meio da qual infraestrutura pode ser 
 alocada e desalocada dinamicamente, trouxe o problema da volatilidade dos dados nas máquinas virtuais. Com algumas ameaças que não deixam evidências em disco \cite{Rafique2013}, 
 a memória de uma máquina despejada de um pool e seus recursos reciclados seria para sempre perdida e com ela evidências importantes. O simples armazenamento do conteúdo da memória
 não satisfaz o requisito jurídico de se repetir o processo e conseguir os mesmos resultados. A abordagem de armazenar constantemente todas as alterações na memória não contribui 
 para a solução do crescente backlog de dados que os investigadores tem para analizar \cite{Quick2014}. O ferramental forense disponível hoje esta pouco adaptado a desafios trazidos
-pela nuvem \cite{Dykstra2012a}, focam em completude, resposta a incidente e raros geram evidências aceitaveis em um processo legal \cite{Reichert2015} e os que levam o fazem apenas
-até a cadeia de custódia. A solução deste problema passa pela confirmação das seguintes hipóteses
+pela nuvem \cite{Dykstra2012a}, focam em completude, resposta a incidente e poucos geram evidências aceitaveis em um processo legal \cite{Reichert2015}. A cadeia de custódia, um 
+processo de coleta e armazenamento que visa garantir que a evidência não foi alterada, destruida ou manipulada por pessoas não autorizadas, é pouco abordada nas soluções existentes
+hoje. A solução destes problemas passa pela confirmação das seguintes hipóteses
 
 \begin{enumerate}
- \item É possível conseguir o mesmo resultado da coleta mesmo se a máquina e o processo de origem não existirem mais: Esta hipótese esta associada a necessidade jurídica de se 
+ \item \textbf{É possível conseguir o mesmo resultado da coleta mesmo se a máquina e o processo de origem não existirem mais}: Esta hipótese esta associada a necessidade jurídica de se 
  repetir o processo de coleta e conseguir os mesmos resultados em um cenário onde as evidências de um ataque estavam na memória de uma máquina virtual que não esta mais no pool.
- Como as soluções de coleta hoje todas se baseiam em isolamento da máquina virtual afetada ou no armazenamento de informação de log, conseguir comprovar esta hipótese tráz um grande
- avanço para a pesquisa.
- \item Não é necessário todo o histórico de alterações da memória nem a cópia bit a bit da mesma para a análise do incidente: Esta hipótese esta associada a realidade do crescente
+ Como a maioria das soluções de coleta hoje se baseiam em isolamento da máquina virtual afetada ou no armazenamento de informação de log, conseguir comprovar esta hipótese nos dá
+ a oportunidade de fechar uma forma de se conseguir impunidade em crimes cometidos na núvem.
+ \item \textbf{Não é necessário todo o histórico de alterações da memória nem a cópia bit a bit da mesma para a análise do incidente}: Esta hipótese esta associada a realidade do crescente
  volume de informações que precisam ser analisadas pelos investigadores forenses, em 2014 a média era de 6 a 12 meses de backlog \cite{Quick2014}. A confirmação desta hipótese
  envolve a aceitação de uma mudança no paradigma de coleta de informações forenses de 'completude' para 'a coleta do necessário'.
 \end{enumerate}
 
-Essa pesquisa se justifica pela necessidade da forense em se adaptar à computação em nuvem. Não ser capaz de levantar evidências impede investigações, prisão de criminosos e 
-correção de vulnerabilidades. Tal cenário é um convite à criminalidade e garantia de impunidade.
+Esta pesquisa tenta resolver os 2 maiores problemas da forense em nuvem hoje sugerindo uma mudança no paradigma da coleta de informações de memória das máquinas. Os desafios apresentados
+neste capítulo mostram que as abodagens atuais estão se esgotando e acompanhar a evolução da nuvem requer uma mudanças nos procedimentos de coleta.
 
 \chapter{Objetivos} \label{chap:obj}
 A aceitabilidade de evidências resultantes do trabalho de peritos é regulada por um conjunto de regras da lei Norte-Americana. Deste conjunto de leis derivou-se 3 requisitos que
