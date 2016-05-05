@@ -307,29 +307,35 @@ ataque fosse perpetrado, impedir que a vulnerabilidade que tornou possível o at
 A forense digital cresceu a partir de técnicas usadas na forense tradicional. Começou de forma artesanal, passou por uma fase de adaptação aos requisitos legais até a era atual
 de ferramental avançado de coleta e análise \cite{Charters2008}.
 
-A utilização crescente de virtualização, ferramentas online e hospredagem em núvem \cite{Amazon2016}, esta inviabilizando algumas práticas forenses \cite{Sharma2012}. 
-Especificamente a funcionalidade da elasticidade de carga ofertada pelos provedores de nuvem por meio da qual infraestrutura pode ser alocada e desalocada dinamicamente, 
-trouxe o problema da volatilidade dos dados nas máquinas virtuais. Com algumas ameaças que não deixam evidências em disco \cite{Rafique2013}, a memória de uma máquina 
-despejada de um pool e seus recursos reciclados seria para sempre perdida e com ela evidências importantes. O simples armazenamento do conteúdo da memória não satisfaz 
-o princípio de Daubert. A abordagem de armazenar constantemente todas as alterações na memória não contribui para a solução do crescente backlog de dados que os investigadores 
-tem para analizar \cite{Quick2014}. O ferramental forense disponível hoje esta pouco adaptado a desafios trazidos pela nuvem \cite{Dykstra2012a}, focam em completude,
-resposta a incidente e raros geram evidências aceitaveis em um processo legal \cite{Reichert2015}. \\
-
-A solução deste problema passa pela confirmação das seguintes hipóteses:
+A utilização crescente de virtualização, ferramentas online e hospedagem em nuvem \cite{Amazon2016}, esta criando dificuldades para a coleta de informações, análise e utilização 
+em processos legais \cite{Sharma2012}. Especificamente a funcionalidade da elasticidade de carga ofertada pelos provedores de nuvem por meio da qual infraestrutura pode ser 
+alocada e desalocada dinamicamente, trouxe o problema da volatilidade dos dados nas máquinas virtuais. Com algumas ameaças que não deixam evidências em disco \cite{Rafique2013}, 
+a memória de uma máquina despejada de um pool e seus recursos reciclados seria para sempre perdida e com ela evidências importantes. O simples armazenamento do conteúdo da memória
+não satisfaz o requisito jurídico de se repetir o processo e conseguir os mesmos resultados. A abordagem de armazenar constantemente todas as alterações na memória não contribui 
+para a solução do crescente backlog de dados que os investigadores tem para analizar \cite{Quick2014}. O ferramental forense disponível hoje esta pouco adaptado a desafios trazidos
+pela nuvem \cite{Dykstra2012a}, focam em completude, resposta a incidente e raros geram evidências aceitaveis em um processo legal \cite{Reichert2015} e os que levam o fazem apenas
+até a cadeia de custódia. A solução deste problema passa pela confirmação das seguintes hipóteses
 
 \begin{enumerate}
- \item É possível conseguir o mesmo resultado da coleta mesmo se a máquina e o processo de origem não existirem mais.
- \item Não é necessário todo os histórico de alterações da memória nem a cópia bit a bit da mesma para a análise do incidente.
+ \item É possível conseguir o mesmo resultado da coleta mesmo se a máquina e o processo de origem não existirem mais: Esta hipótese esta associada a necessidade jurídica de se 
+ repetir o processo de coleta e conseguir os mesmos resultados em um cenário onde as evidências de um ataque estavam na memória de uma máquina virtual que não esta mais no pool.
+ Como as soluções de coleta hoje todas se baseiam em isolamento da máquina virtual afetada ou no armazenamento de informação de log, conseguir comprovar esta hipótese tráz um grande
+ avanço para a pesquisa.
+ \item Não é necessário todo o histórico de alterações da memória nem a cópia bit a bit da mesma para a análise do incidente: Esta hipótese esta associada a realidade do crescente
+ volume de informações que precisam ser analisadas pelos investigadores forenses, em 2014 a média era de 6 a 12 meses de backlog \cite{Quick2014}. A confirmação desta hipótese
+ envolve a aceitação de uma mudança no paradigma de coleta de informações forenses de 'completude' para 'a coleta do necessário'.
 \end{enumerate}
 
-Essa pesquisa se justifica pela necessidade da forense em se adaptar a computação em nuvem. Não ser capaz de levantar evidências impede investigações, prisão de criminosos e 
-correção de vulnerabilidades. Tal cenário é um convite a criminalidade e garantia de impunidade.
+Essa pesquisa se justifica pela necessidade da forense em se adaptar à computação em nuvem. Não ser capaz de levantar evidências impede investigações, prisão de criminosos e 
+correção de vulnerabilidades. Tal cenário é um convite à criminalidade e garantia de impunidade.
 
 \chapter{Objetivos} \label{chap:obj}
-O princípio de Daubert é uma norma da lei Norte-Americana que versa sobre a admissibilidade de evidências oriundas do trabalho de peritos em um processo legal. Pertinentes a
-esta pesquisa estão a obrigatoriedade em garantir que as provas não foram comprometidas ou alteradas durante o processo de coleta, a reprodutibilidade do processo e
-por fim conhecer sua taxa de erro. Sendo assim, o objetivo principal deste projeto é provar que é possível coletar de dados de memória de processos em 
-máquinas na nuvem de modo que estes se submetam com sucesso a parte cabível do Princípio de Daubert. Para alcançar este objetivo, os seguintes subobjetivos precisam ser alcançados:
+A aceitabilidade de evidências resultantes do trabalho de peritos é regulada por um conjunto de regras da lei Norte-Americana. Deste conjunto de leis derivou-se 3 requisitos que
+a evidência coletada de nuvem precisa se submeter são eles, a obrigatoriedade em garantir que as provas não foram comprometidas ou alteradas durante o processo de coleta, o processo
+de coleta ser capaz gerar as mesmas evidências quando executado novamente e por fim conhecer sua taxa de erro. A maioria das pesquisas relacionadas a coleta de informações tem viés
+técnico e poucos lidam com os aspectos legais relacionados a coleta de informações. Sendo assim, o objetivo principal deste projeto é provar que é possível coletar de dados de 
+memória de processos em máquinas na nuvem de modo que estes atendam aos 3 requisitos legais mencionados anteriormente. Para alcançar este objetivo, os seguintes subobjetivos 
+precisam ser alcançados:
 
 \begin{enumerate}
  \item Conseguir reproduzir o processo de coleta mesmo se a máquina de onde se originaram os dados tiver sido despejada e seus recursos desalocados.
@@ -366,44 +372,44 @@ conseguir distinguir o momento anterior ao ataque.
 \end{enumerate}
 
 \chapter{Revisão bibliográfica} \label{chap:related}
+A revisão bibliográfica focou nos seguintes conceitos da coleta de informações forenses em nuvem:
+
 \begin{itemize}
- \item \textbf{Automated Forensic Data Acquisition in the Cloud \cite{Reichert2015} }: Propõe um modelo de coleta de dados de máquinas virtuais acionado por um sistema de 
- detecção de ameaça. Usa o Google Rapid Response para salvar as informações coletadas fora da núvem de forma a driblar os problemas de multi-jurisdição e multi-inquilino.\\
- O modelo proposto não cobre o cenário em que uma máquina é despejada do pool e seus recursos liberados após a detecção da ameaça e não explica como vai manter a cadeia de 
- custódia da evidência.
- \item \textbf{Digital forensics framework for a cloud environment \cite{George2012} }: Framework para coleta de dados de máquinas virtuais e associa-las aos usuários da 
- núvem. Usa a estratégia de armazenar tudo para evitar perda de informação decorrente do despejo de uma máquina do pool e desalocação de seus recursos. Armazena os dados coletados
- na própria nuvem.\\
- O framework proposto, apesar de cobrir o cenário em que uma máquina é despejada do pool e os recursos liberados, não dá detalhes o suficiente para demonstrar que consegue 
- reproduzir o processo e obter o mesmo resultado. É focado no usuário e não no hardware e leva algum tempo para identificar os usuários envolvidos. Usando a própria núvem para 
- armazenar os dados coletados ele depende de cooperação do provedor de núvem para obter tais dados.
- \item \textbf{Evidence and cloud computing the virtual machine introspection approach \cite{Poisel2013} }: Descreve o processo de coleta de informações de máquinas
- em núvem através da técnica de introspecção em máquina virtual, onde se acessa os dados das máquinas virtuais através do hypervisor. Propõe que o processo seja disparado 
- por demanda atrelado a um sistema de detecção de ameaça ou intervenção humana.\\
- A técnica descrita cobre apenas o processo de coleta de informações. No que tange as informações de memória, como os endereços de memória são os do host, estes precisam ser traduzidos
- para que a análise forense seja feita. Como a abordagem não tem conhecimento do que esta rodando dentro da máquina virtual precisa de uma copia bit a bit da evidência. Embora pareça
- possível, não descreve como lida com o cenário onde uma máquina é despejada do pool e os recursos liberados.
- \item \textbf{Design and implementation of FROST: FoRensic tools for Open STack \cite{Dykstra2013} }: Framework para coleta de dados de máquinas virtuais através da API do 
- hypervisor, usa técnicas reconhecidas atualmente para coleta e armazenamento dos dados. Isola a máquina virtual afetada do pool original para realização da coleta. Precisa 
- ser acionado quando uma ameaça é detectada.\\
- O framework proposto não cobre o cenário em que uma máquina é despejada do pool e os recursos liberados após a detecção da ameaça. Não conhece o que esta rodando na máquina 
- virtual, tem acesso apenas as informações que são disponibilizadas pela API do hypervisor e não explica como vai manter a cadeia de custódia.
- \item \textbf{A log based approach to make digital forensics easier on cloud computing \cite{Sang2013} }: Método que sugere salvar a informação coletada fora da núvem de modo a driblar
- os problemas de multi-inquilinato e multi-jurisdição, usa um mecanismo de hash para garantir a autenticidade e integridade da informação mas não dá detalhes da implementação. 
- Dá exemplos de como funcionaria em PaaS e SaaS.\\
- Segundo o próprio autor, o método não funciona em IaaS. Precisa da cooperação do provedor de nuvem pois depende que este último decida quais informações serão adicionadas ao log.
- O método não é aplicável a coleta de informações de memória.
-\item \textbf{Volatile memory acquisition using backup for forensic investigation \cite{Dezfouli2012} }: Técnica que sugere a utilização da própria máquina
-como repositório de informações de memória volátil, para manter a utilização de espaço ao mínimo sugere manter apenas o último estado conhecido de cada processo.\\
-A técnica não cobre o cenário em que uma máquina é despejada do pool e seus recursos são reutilizados, de fato, esta técnica provocaria a perda de todas as evidências caso a 
-liberação de recursos da máquina ocorra.
+ \item Acessar e coletar as informações em geral das máquinas em nuvem
+ \item Conformidade com os seguintes requisitos legais: 
+ \begin{itemize}
+  \item reproduzir o processo com os mesmos resultados
+  \item não violar privacidade de outros usuários de nuvem
+  \item garantir a cadeia de custódia da evidência
+ \end{itemize}
 \end{itemize}
 
+Com isso constatou-se que, referente a coleta de informações a maioria dos trabalhos mais importantes na área \cite{Reichert2015}, \cite{Poisel2013}, \cite{Dykstra2013}, \cite{George2012}
+\cite{Sang2013} foca em coleta reativa, isto é, ela acontece apenas após a ameaça ser detectada. Podem acontecer por acionamento manual ou integrada a um mecanismo de detecção de ameaça. 
+Em casos de memória volátil, esta forma de coleta de informação não consegue descrever como era a memória antes do ataque, o que acredito é necessário para a estratégia de 
+coletar o mínimo necessário para realizar a investigação e apoiar o processo jurídico. A única proposta encontrada que leva esta necessidade em consideração é \cite{Dezfouli2012} mas
+propoe que o dado seja armazenado no próprio dispositivo o que pode levar a perda das informações caso a máquina seja despejada do pool e seus recursos liberados.
+
+Ainda na coleta de informações, \cite{Reichert2015}, \cite{George2012} sugerem a abordagem de forense ao vivo onde os dados são coletados com o sistema rodando enquanto 
+\cite{Poisel2013}, \cite{Dykstra2013}, \cite{Sang2013} adotam a estratégia de isolar e/ou pausar a máquina virtual e em seguida disparar o processo de coleta. Nos dois casos, 
+nenhum dos autores cobre o cenário onde a máquina é despejada do pool e os recursos são liberados. Analisando cuidadosamente as propostas de \cite{Poisel2013}, parece que é possível
+cobrir o cenário mencionado anteriormente mas ele não dá detalhes da implementação o suficiente para termos certeza.
+
+Referente aos requisitos legais, nenhuma das propostas consegue reproduzir os mesmos resultados ao repetir o processo no cenário em que uma máquina é despejada da nuvem e seus 
+recursos liberados. Analisando cuidadosamente a proposta de \cite{George2012} parece que é possível mas o autor não dá detalhes de implementação suficientes para termos certeza.
+
+No armazenamento das informações coletadas, \cite{Reichert2015}, \cite{George2012}, \cite{Poisel2013} e \cite{Dykstra2013} usam estratégia de armazenamento fora da nuvem para 
+resolver o problema de violação de privacidade de outros usuários no processo da coleta. \cite{Sang2013} e um caso específico de \cite{George2012} dependem de cooperação do 
+provedor de nuvem para conseguir as informações necessárias à investigação.
+
+Na garantia da cadeia de custódia apenas \cite{Sang2013} faz alguma tentativa de resolver a questão porem cuida apenas da garantia que a evidência não foi destruida ou alterada a
+traves de cálculo de hashing mas não explica como impede o acesso não autorizado à evidência. As propostas dos outros autores estão focadas apenas no aspecto técnico da coleta.
+
 \chapter{Resultados esperados} \label{chap:result}
-O primeiro resultado esperado é um arcabouço que consiga coletar informações de memória de processos de máquinas na nuvem e armazena-las em um local físico conhecido.
+O primeiro resultado esperado é um arcabouço que consiga coletar informações de memória de processos de máquinas na nuvem e armazená-las em um local físico conhecido.
 Este armazenamento deve garantir a cadeia de custódia e o volume de informação armazenada será o suficiente para diferenciar o sistema antes e depois que a ameaça foi 
-detectada. A utilização deste arcabouço sob as mesmas condições deve gerar um conjunto identico de evidências. Com isso, será possível fechar uma das formas de impunidade 
-para os atos ilícitos em núvem e contribuir para a diminuição do backlog de investigação.
+detectada. A utilização deste arcabouço sob as mesmas condições deve gerar um conjunto idêntico de evidências. Com isso, será possível fechar uma das formas de impunidade 
+para os atos ilícitos em nuvem e contribuir para a diminuição do backlog de investigação.
 
 \bibliography{abntex2-modelo-references}
 
