@@ -352,25 +352,53 @@ aos 3 requisitos legais mencionados anteriormente. \\
 \end{enumerate}
 
 \chapter{Método} \label{chap:metodo}
-\begin{enumerate}
- \item Desenvolver uma aplicação de coleta de informações de memória em nuvem de modo que se consiga relacionar a mesma a sua origem e que
-o processo seja repetível. Este estudo será realizado em máquinas virtuais rodando sistemas operacionais windows e linux. A verificação do funcionamento correto será feita 
-da seguinte forma:
+
+Para atingir os objetivos \textbf{Conseguir reproduzir o processo de coleta mesmo se a máquina de onde se originaram os dados tiver sido despejada e seus recursos 
+liberados} e \textbf{Conhecer a taxa de erro do processo} é preciso construir os seguintes artefatos.
 
 \begin{enumerate}
- \item Disparar o processo de coleta.
- \item Simular um ataque exclusivamente a memória.
- \item Despejar a máquina virtual do pool e liberar seus recursos.
- \item Separar as evidências.
+ \item Construir uma máquina virtual e desenvolver uma aplicação que serão o alvo da coleta. Esta máquina seŕa construída usando programas de gerenciamento de configuração como
+ Puppet \cite{Wikipedia2015} ou Vagrant\cite{Wikipedia2016} e a aplicação será instalada na máquina usando um programa automatizador de instalação baseado em 
+ conteiner como o Docker \cite{Wikipedia2016a}. A aplicação será uma página web dinâmica hospedada em um servidor Nginx que responde um HTML contendo a palavra 'ACK' 
+ para qualquer requisição.
+ 
+ \item Desenvolver uma ameaça simples que altera a memória da aplicação alvo da coleta.
+ 
+ \item Desenvolver uma aplicação de coleta de informações de memória em nuvem de modo que se consiga relacionar a mesma a sua origem e que o resultado seja o mesmo.
+ 
+ Com os artefatos construídos acima conduzir o experimento:
+
+\begin{enumerate}
+ \item Criar a máquina virtual.
+ \item Disparar a aplicação de coleta de evidência.
+ \item Aplicar a ameaça.
+ \item Despejar a máquina virtual e liberar seus recursos.
+ \item Identificar e guardar a evidência.
  \item Recriar a máquina.
- \item Simular um ataque exclusivamente a memória.
- \item Despejar a máquina virtual do pool e liberar seus recursos.
- \item Mensurar a diferença entre as coletas por comparação simples bit a bit e guardar o percentual de diferença.
- \item Repetir os passos (e), (f), (g) e (h) até a estabilização do erro.
+ \item Disparar a aplicação de coleta de evidência. 
+ \item Aplicar a ameaça.
+ \item Despejar a máquina virtual e liberar seus recursos.
+ \item Identificar e guardar a evidência.
+ \item Repetir os passos (f), (g), (h), (i) e (j).
 \end{enumerate}
 
-\item Desenvolver e documentar um arcabouço de armazenamento dos dados que garanta a cadeia de custódia da evidência guardando dados o suficiente para 
-conseguir descrever o momento anterior ao ataque.
+\textbf{A medição}: Estamos interessados em avaliar o quão idênticas são as evidências coletadas no processo, esta diferença é a \textbf{taxa de erro do processo}. É esperado 
+que haja alguma diferença pela natureza dinâmica da memória. Não há, formalmente falando, um nível máximo de erro aceitável no processo de coleta. A evidência é anexada ao procedimento
+jurídico junto com a descrição do método de coleta e o erro associado onde então pode ser contestada pelas partes envovidas. Assim sendo a medição do erro da coleta será feita 
+comparando a evidência coletada com as coletadas anteriormente. Esta comparação será feita bit a bit e o resultado será o cálculo da \% de bits diferentes entre as duas coletas. 
+Cada nova evidência gerada será comparada com as coletas anteriores e a média das comparações será a taxa de erro do processo de coleta. Assim temos:
+
+Formula da taxa de erro.
+
+\end{enumerate}
+
+Para atingir os objetivos: \textbf{Descobrir o mínimo de informação necessária antes do incidente de modo a viabilizar a análise} e \textbf{Conseguir realizar a coleta sem violar
+jurisdição e privacidade de usuários não relacionados a investigação mantendo a cadeia de custódia} é preciso construir o seguinte artefato.
+
+\begin{enumerate}
+
+\item O diagrama de um arcabouço para transportar a evidência da máquina virtual alvo construida para o experimento anterior até um local de armazenamento fora da núvem. Este trans
+porte será realizado via TLS e o ambiente de destino da evidência terá o acesso controlado por chave privada.
 
 \item Entrevistar analistas forenses e juízes. Apresentá-los o arcabouço de armazenamento e coletar opiniões sobre a aceitabilidade do mesmo.
 

@@ -94,4 +94,21 @@ Dispon{\'\i}vel em:
 \emph{Advances in Engineering, Science and Management (ICAESM), 2012
   International Conference on}, p. 617--620, 2012.}
 
+\bibitem[Wikipedia 2015]{Wikipedia2015}
+\abntrefinfo{Wikipedia}{WIKIPEDIA}{2015}
+{WIKIPEDIA. \emph{{Puppet}}. 2015.
+Dispon{\'\i}vel em: \url{https://pt.wikipedia.org/wiki/Puppet}.}
+
+\bibitem[Wikipedia 2016]{Wikipedia2016a}
+\abntrefinfo{Wikipedia}{WIKIPEDIA}{2016a}
+{WIKIPEDIA. \emph{{Docker}}. 2016.
+Dispon{\'\i}vel em:
+  \url{https://en.wikipedia.org/wiki/Docker{\_}{\%}28software{\%}29}.}
+
+\bibitem[Wikipedia 2016]{Wikipedia2016}
+\abntrefinfo{Wikipedia}{WIKIPEDIA}{2016b}
+{WIKIPEDIA. \emph{{Vagrant}}. 2016.
+Dispon{\'\i}vel em:
+  \url{https://en.wikipedia.org/wiki/Vagrant{\_}{\%}28software{\%}29}.}
+
 \end{thebibliography}
