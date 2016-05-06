@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.10)  5 MAY 2016 17:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.10)  5 MAY 2016 21:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1273,18 +1273,18 @@ l.240 \end{resumo}
 ] [5
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 380.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 387.
 
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 380
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 387
 .
  (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 380.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 387.
 <<oms.cmap>> [6
 
 ] [7]
@@ -1325,25 +1325,25 @@ AED: lastpage setting LastPage
 [9
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 436.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 436.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 446.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 446.
  (./hamilton-plano.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 436.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 436.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 446.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 446.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 436.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 446.
  ) 
 Here is how much of TeX's memory you used:
  21181 strings out of 493304
- 358901 string characters out of 6139871
+ 358883 string characters out of 6139871
  502360 words of memory out of 5000000
  24086 multiletter control sequences out of 15000+600000
- 55401 words of font info for 88 fonts, out of 8000000 for 9000
+ 55219 words of font info for 86 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 69i,13n,57p,449b,531s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,12n,57p,449b,531s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public
@@ -1352,10 +1352,10 @@ xmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 ss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy1
 0.pfb>
-Output written on hamilton-plano.pdf (10 pages, 211861 bytes).
+Output written on hamilton-plano.pdf (10 pages, 212341 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
- 213 compressed objects within 3 object streams
- 48 named destinations out of 1000 (max. 500000)
+ 244 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
+ 52 named destinations out of 1000 (max. 500000)
  19545 words of extra memory for PDF output out of 20736 (max. 10000000)
 
