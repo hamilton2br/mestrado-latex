@@ -10,6 +10,12 @@
 {AMAZON. \emph{{Amazon Media Room Press Release}}.
 [S.l.], 2016. 2~p.}
 
+\bibitem[Barbara 2014]{Do2014}
+\abntrefinfo{Barbara}{BARBARA}{2014}
+{BARBARA, D. \emph{{Desafios da per{\'{i}}cia forense em um ambiente de
+  computa{\c{c}}{\~{a}}o nas nuvens}}.
+[S.l.], 2014.}
+
 \bibitem[Charters, Smith e McKee 2008]{Charters2008}
 \abntrefinfo{Charters, Smith e McKee}{CHARTERS; SMITH; MCKEE}{2008}
 {CHARTERS, I.; SMITH, M.; MCKEE, G. {The Evolution of Digital Forensics}. In:
@@ -94,8 +100,13 @@ Dispon{\'\i}vel em:
 \emph{Advances in Engineering, Science and Management (ICAESM), 2012
   International Conference on}, p. 617--620, 2012.}
 
+\bibitem[Wikipedia 2015]{Wikipedia2015a}
+\abntrefinfo{Wikipedia}{WIKIPEDIA}{2015a}
+{WIKIPEDIA. \emph{{NginX}}. 2015.
+Dispon{\'\i}vel em: \url{https://pt.wikipedia.org/wiki/Nginx}.}
+
 \bibitem[Wikipedia 2015]{Wikipedia2015}
-\abntrefinfo{Wikipedia}{WIKIPEDIA}{2015}
+\abntrefinfo{Wikipedia}{WIKIPEDIA}{2015b}
 {WIKIPEDIA. \emph{{Puppet}}. 2015.
 Dispon{\'\i}vel em: \url{https://pt.wikipedia.org/wiki/Puppet}.}
 

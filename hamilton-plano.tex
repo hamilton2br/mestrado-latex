@@ -227,9 +227,9 @@
 % resumo em português
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
-Esta pesquisa vai demonstrar que as abordagens para a coleta de informações de memória volátil de máquinas em nuvem com o propósito de análise forense disponíveis hoje não 
+Esta pesquisa tenta demonstrar que as abordagens para a coleta de informações de memória volátil de máquinas em nuvem com o propósito de análise forense disponíveis hoje não 
 lidam com as características elásticas, multi-inquilino, multi-jurisdição da nuvem e os requisitos jurídicos para as evidências de forma satisfatória. Espero comprovar através
-da implementação de um arcabouço de coleta de informações de memória em nuvem, que a solução para estes problemas estao em uma mudança na abordagem da coleta e armazenamento 
+da implementação de um arcabouço de coleta destas informações, que a solução para estes problemas está em uma mudança na abordagem da coleta e armazenamento 
 da evidência. Tendo êxito daremos um passo para a solução dos dois maiores problemas hoje na forense em nuvem, volume de dados crescente e a pouca conformidade com requisitos jurídicos.
 
 % \vspace{\onelineskip}
@@ -308,12 +308,12 @@ previstas na lei \cite{Sang2013}.
 A forense digital cresceu a partir de técnicas usadas na forense tradicional. Começou de forma artesanal, passou por uma fase de adaptação aos requisitos legais até a era atual
 de ferramental avançado de coleta e análise \cite{Charters2008}.
 
-A utilização crescente de virtualização, ferramentas online e hospedagem em nuvem \cite{Amazon2016}, esta criando dificuldades para a coleta de informações, análise e utilização 
+A utilização crescente de virtualização, ferramentas online e hospedagem em nuvem \cite{Amazon2016}, está criando dificuldades para a coleta de informações, análise e utilização 
 em processos legais \cite{Sharma2012}. A funcionalidade de elasticidade de carga ofertada pelos provedores de nuvem por meio da qual infraestrutura pode ser 
 alocada e desalocada dinamicamente, trouxe o problema da volatilidade dos dados nas máquinas virtuais. Com algumas ameaças que não deixam evidências em disco \cite{Rafique2013}, 
-a memória de uma máquina despejada de um pool e seus recursos liberados seria para sempre perdida e com ela evidências importantes. O simples armazenamento do conteúdo da memória
-não satisfaz o requisito jurídico de se repetir o processo e conseguir os mesmos resultados. A abordagem de armazenar constantemente todas as alterações na memória não contribui 
-para a solução do crescente backlog de dados que os investigadores tem para analizar \cite{Quick2014}. 
+a memória de uma máquina virtual despejada de um pool e seus recursos liberados seria para sempre perdida e com ela evidências importantes. O simples armazenamento do conteúdo 
+da memória não satisfaz o requisito jurídico de se repetir o processo e conseguir os mesmos resultados. A abordagem de armazenar constantemente todas as alterações da
+memória não contribui para a solução do crescente backlog de dados que os investigadores tem para analizar \cite{Quick2014}. 
 
 O ferramental forense disponível hoje esta pouco adaptado a desafios trazidos pela nuvem \cite{Dykstra2012a}, focam em completude e poucos geram evidências aceitáveis em um 
 processo jurídico \cite{Reichert2015}. A cadeia de custódia, um processo de coleta e armazenamento de evidências que visa garantir que a evidência não foi alterada, destruída 
@@ -323,11 +323,12 @@ A solução destes problemas passa pela confirmação das seguintes hipóteses
 
 \begin{enumerate}
  \item \textbf{É possível conseguir o mesmo resultado da coleta mesmo se a máquina e o processo de origem não existirem mais}: Esta hipótese esta associada a necessidade jurídica de se 
- repetir o processo de coleta e conseguir os mesmos resultados em um cenário onde as evidências de um ataque estavam na memória de uma máquina virtual que não está mais no pool.
+ repetir o processo de coleta e conseguir os mesmos resultados em um cenário onde as evidências de um ataque estavam na memória de uma máquina virtual que foi despejada do pool e
+ teve seus recursos liberados.
  Como a maioria das soluções de coleta hoje se baseiam em isolamento da máquina virtual afetada ou no armazenamento de informação de log, comprovar esta hipótese nos dá
  a oportunidade de fechar uma forma de se conseguir impunidade em crimes cometidos na nuvem.
  \item \textbf{Não é necessário todo o histórico de alterações da memória nem a cópia bit a bit da mesma para a análise do incidente}: Esta hipótese esta associada ao crescente
- volume de informações que precisam ser analisadas pelos investigadores forenses, em 2014 a média era de 6 a 12 meses de backlog \cite{Quick2014}. A confirmação desta hipótese
+ volume de informações que precisam ser analisadas pelos investigadores forenses. Em 2014 a média era de 6 a 12 meses de backlog \cite{Quick2014}. A confirmação desta hipótese
  envolve a aceitação de uma mudança no paradigma de coleta de informações forenses de 'completude' para 'a coleta do necessário'.
 \end{enumerate}
 
@@ -338,7 +339,7 @@ neste capítulo mostram que as abordagens atuais estão se esgotando e acompanha
 A aceitabilidade de evidências resultantes do trabalho de peritos é regulada por um conjunto de regras da lei Norte-Americana. Deste conjunto de leis derivou-se 3 requisitos que
 a evidência coletada de nuvem precisa se submeter, são eles: A obrigatoriedade em garantir que as provas não foram comprometidas ou alteradas durante o processo de coleta, o processo
 de coleta ser capaz de gerar as mesmas evidências quando executado novamente por outra pessoa e por fim conhecer sua taxa de erro. A maioria das pesquisas relacionadas a coleta de 
-informações tem viés técnico e poucos lidam com os aspectos legais relacionados a coleta de informações. Sendo assim temos:
+informações tem viés técnico e poucos lidam com os aspectos legais relacionados a coleta de informações. Sendo assim temos:\\
 
 \noindent \textbf{Objetivo geral}: Provar que é possível coletar dados de memória de processos em máquinas na nuvem de modo que estes atendam
 aos 3 requisitos legais mencionados anteriormente. \\
@@ -353,14 +354,20 @@ aos 3 requisitos legais mencionados anteriormente. \\
 
 \chapter{Método} \label{chap:metodo}
 
-Para atingir os objetivos \textbf{Conseguir reproduzir o processo de coleta mesmo se a máquina de onde se originaram os dados tiver sido despejada e seus recursos 
-liberados} e \textbf{Conhecer a taxa de erro do processo} é preciso construir os seguintes artefatos.
+\begin{flushleft}Para atingir os objetivos:\end{flushleft} 
+
+\begin{itemize}
+ \item \textbf{Conseguir reproduzir o processo de coleta mesmo se a máquina de onde se originaram os dados tiver sido despejada e seus recursos liberados}
+ \item \textbf{Conhecer a taxa de erro do processo} 
+\end{itemize}
+
+\begin{flushleft}é preciso construir os seguintes artefatos:\end{flushleft}
 
 \begin{enumerate}
- \item Construir uma máquina virtual e desenvolver uma aplicação que serão o alvo da coleta. Esta máquina seŕa construída usando programas de gerenciamento de configuração como
- Puppet \cite{Wikipedia2015} ou Vagrant\cite{Wikipedia2016} e a aplicação será instalada na máquina usando um programa automatizador de instalação baseado em 
- conteiner como o Docker \cite{Wikipedia2016a}. A aplicação será uma página web dinâmica hospedada em um servidor Nginx que responde um HTML contendo a palavra 'ACK' 
- para qualquer requisição.
+ \item Construir uma máquina virtual e desenvolver uma aplicação que serão o alvo da coleta. A máquina virtual será construída usando programas de gerenciamento 
+ de configuração como Puppet \cite{Wikipedia2015} ou Vagrant\cite{Wikipedia2016} e a aplicação será instalada na máquina virtual usando um programa automatizador de 
+ instalação baseado em conteiner como o Docker \cite{Wikipedia2016a}. A aplicação será uma página web dinâmica hospedada em um servidor Nginx \cite{Wikipedia2015a} na
+ máquina alvo que responde um HTML contendo a palavra 'ACK' para qualquer requisição.
  
  \item Desenvolver uma ameaça simples que altera a memória da aplicação alvo da coleta.
  
@@ -370,54 +377,61 @@ liberados} e \textbf{Conhecer a taxa de erro do processo} é preciso construir o
 
 \begin{enumerate}
  \item Criar a máquina virtual.
- \item Disparar a aplicação de coleta de evidência.
+ \item Executar a aplicação de coleta de evidência.
  \item Aplicar a ameaça.
  \item Despejar a máquina virtual e liberar seus recursos.
  \item Identificar e guardar a evidência.
- \item Recriar a máquina.
- \item Disparar a aplicação de coleta de evidência. 
- \item Aplicar a ameaça.
- \item Despejar a máquina virtual e liberar seus recursos.
- \item Identificar e guardar a evidência.
- \item Repetir os passos (f), (g), (h), (i) e (j).
+ \item Repetir os passos anteriores.
 \end{enumerate}
 
-\textbf{A medição}: Estamos interessados em avaliar o quão idênticas são as evidências coletadas no processo, esta diferença é a \textbf{taxa de erro do processo}. É esperado 
-que haja alguma diferença pela natureza dinâmica da memória. Não há, formalmente falando, um nível máximo de erro aceitável no processo de coleta. A evidência é anexada ao procedimento
-jurídico junto com a descrição do método de coleta e o erro associado onde então pode ser contestada pelas partes envovidas. Assim sendo a medição do erro da coleta será feita 
-comparando a evidência coletada com as coletadas anteriormente. Esta comparação será feita bit a bit e o resultado será o cálculo da \% de bits diferentes entre as duas coletas. 
-Cada nova evidência gerada será comparada com as coletas anteriores e a média das comparações será a taxa de erro do processo de coleta. Assim temos:
+\textbf{A medição}: Estamos interessados em avaliar o quão idênticas são as evidências coletadas no processo. É esperado que haja alguma diferença pela natureza dinâmica da memória. 
 
-Formula da taxa de erro.
+Formalmente não há um limite máximo ou mínimo de erro aceitável no processo de coleta. No procedimento jurídico, a evidência é anexada junto com a descrição do método 
+de coleta e o erro associado onde então, caso uma das partes entenda ser necessário, pode ser contestada. Assim sendo a medição do erro da coleta será feita comparando 
+a evidência coletada com as coletadas anteriormente. Esta comparação será feita bit a bit e o resultado será o cálculo da \% de bits diferentes entre as duas coletas. 
+Cada nova evidência gerada será comparada com as coletas anteriores e a média das comparações será a \textbf{taxa de erro do processo de coleta}.
 
 \end{enumerate}
 
-Para atingir os objetivos: \textbf{Descobrir o mínimo de informação necessária antes do incidente de modo a viabilizar a análise} e \textbf{Conseguir realizar a coleta sem violar
-jurisdição e privacidade de usuários não relacionados a investigação mantendo a cadeia de custódia} é preciso construir o seguinte artefato.
+\begin{flushleft}Para atingir os objetivos: \end{flushleft} 
+
+\begin{itemize}
+ \item \textbf{Descobrir o mínimo de informação necessária antes do incidente de modo a viabilizar a análise}
+ \item \textbf{Conseguir realizar a coleta sem violar jurisdição e privacidade de usuários não relacionados a investigação mantendo a cadeia de custódia} 
+\end{itemize}
+
+\begin{flushleft}é preciso construir o seguinte artefato:\end{flushleft}
 
 \begin{enumerate}
 
-\item O diagrama de um arcabouço para transportar a evidência da máquina virtual alvo construida para o experimento anterior até um local de armazenamento fora da núvem. Este trans
-porte será realizado via TLS e o ambiente de destino da evidência terá o acesso controlado por chave privada.
+\item O diagrama de um arcabouço para transportar a evidência da máquina virtual alvo construida para o experimento anterior até um local de armazenamento fora da nuvem. Este 
+transporte será realizado via TLS e o ambiente de destino da evidência terá o acesso controlado por chave privada.
 
-\item Entrevistar analistas forenses e juízes. Apresentá-los o arcabouço de armazenamento e coletar opiniões sobre a aceitabilidade do mesmo.
-
-\item Entrevistar novamente analistas forenses e juízes. Apresentá-los a estratégia de armazenamento mínimo e coletar opiniões sobre a aceitabilidade do mesmo. 
-
-\item Publicar resultados.
-
-\item Escrita e defesa de tese.
+\textbf{A validação do arcabouço}: O trabalho do perito é regido por uma norma que trata, entre outras coisas, dos procedimentos que devem ser executados para coleta. Esta norma no Brasil é o 
+Código de Processo Penal que foi instituído pelo decreto lei N\textsuperscript{\underline{o}} 3689 de 3 de outubro de 1941. O Código Penal Brasileiro em sua Parte Especial 
+tipifica uma série de crimes digitais mas assim como o Código de Processo Penal possuem brechas \cite{Do2014} pois não evouíram tão rápido quanto a tecnologia. Com isso, 
+aferir se a solução atende aos objetivos mencionados depende de opinião de peritos assim, temos as seguintes ações:
 
 \end{enumerate}
+
+\begin{itemize}
+
+\item Entrevistar peritos forenses, apresentá-los o arcabouço de armazenamento e coletar opiniões sobre a sua aceitabilidade.
+
+\item Entrevistar peritos forenses, apresentá-los a taxa de erro do processo e coletar opiniões sobre a sua aceitabilidade.
+
+\item Entrevistar novamente peritos forenses, apresentá-los a estratégia de armazenamento mínimo e coletar opiniões sobre a sua aceitabilidade. 
+
+\end{itemize}
 
 \chapter{Revisão bibliográfica} \label{chap:related}
 A revisão bibliográfica focou nos seguintes conceitos da coleta de informações forenses em nuvem:
 
 \begin{itemize}
- \item Acessar e coletar as informações, de memória volátil ou não, das máquinas em nuvem.
+ \item Acessar e coletar as informações, de memória ou não, das máquinas virtuais em nuvem.
  \item Conformidade com os seguintes requisitos jurídicos: 
  \begin{itemize}
-  \item Reproduzir o processo com os mesmos resultados.
+  \item Reproduzir o processo com os mesmos resultados e conhecer a taxa de erro.
   \item Não violar privacidade de outros usuários de nuvem ou jurisdição de outros países.
   \item Garantir a cadeia de custódia da evidência.
  \end{itemize}
@@ -428,14 +442,14 @@ Com a revisão constatou-se que, referente a coleta de informações a maioria d
 mecanismo de detecção de ameaça. Em casos de memória volátil, esta forma de coleta de informação não consegue descrever como era a memória antes do ataque. Esta capacidade é
 necessária para viabilizar a abordagem de coletar o mínimo necessário para realizar a investigação e apoiar o processo jurídico. A única proposta encontrada que leva esta 
 necessidade em consideração é \cite{Dezfouli2012} mas propõe que o dado seja armazenado no próprio dispositivo o que pode levar a perda de informações importantes caso a 
-máquina seja despejada do pool e seus recursos liberados.
+máquina virtual seja despejada do pool e seus recursos liberados.
 
 Ainda na coleta de informações, \cite{Reichert2015}, \cite{George2012} sugerem a abordagem de forense ao vivo onde os dados são coletados com o sistema rodando enquanto 
-\cite{Poisel2013}, \cite{Dykstra2013}, \cite{Sang2013} adotam a estratégia de isolar e/ou pausar a máquina virtual e em seguida disparar o processo de coleta. Nos dois casos, 
-nenhum dos autores cobre o cenário onde a máquina é despejada do pool e os recursos são liberados. Analisando cuidadosamente as propostas de \cite{Poisel2013}, parece que é possível
-cobrir o cenário mencionado anteriormente mas ele não dá detalhes da implementação o suficiente para termos certeza.
+\cite{Poisel2013}, \cite{Dykstra2013}, \cite{Sang2013} adotam a estratégia de isolar e/ou parar a máquina virtual e em seguida executar o processo de coleta. Nos dois casos, 
+nenhum dos autores cobre o cenário onde a máquina virtual é despejada do pool e os recursos são liberados. Analisando cuidadosamente as propostas de \cite{Poisel2013}, parece que é possível
+cobrir o cenário mencionado anteriormente mas ele não dá detalhes da implementação suficientes para termos certeza.
 
-Referente aos requisitos legais, nenhuma das propostas consegue reproduzir os mesmos resultados ao repetir o processo no cenário em que uma máquina é despejada da nuvem e seus 
+Referente aos requisitos legais, nenhuma das propostas consegue reproduzir os mesmos resultados ao repetir o processo no cenário em que uma máquina virtual é despejada da nuvem e seus 
 recursos liberados. Analisando cuidadosamente a proposta de \cite{George2012} parece que é possível mas o autor não dá detalhes de implementação suficientes para termos certeza.
 
 No armazenamento das informações coletadas, \cite{Reichert2015}, \cite{George2012}, \cite{Poisel2013} e \cite{Dykstra2013} usam estratégia de armazenamento fora da nuvem para 
@@ -443,7 +457,7 @@ resolver o problema de jurisdição e violação de privacidade de outros usuár
 cooperação do provedor de serviços de nuvem para conseguir as informações necessárias à investigação. Depender do provedor de serviços de nuvem é uma estratégia fraca pois o foco
 deles é garantir a continuidade do serviço não a coleta de evidências. 
 
-Na garantia da cadeia de custódia apenas \cite{Sang2013} tenta resolver a questão mas toma cuidados apenas para  garantia que a evidência não foi destruida ou alterada. 
+Na garantia da cadeia de custódia apenas \cite{Sang2013} tenta resolver a questão mas toma cuidados apenas para  garantir que a evidência não foi destruída ou alterada. 
 Ele faz isso através de cálculo de hashing mas não explica como impede o acesso não autorizado à evidência. As propostas dos outros autores estão focadas apenas no 
 aspecto técnico da coleta.
 
