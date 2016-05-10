@@ -1,0 +1,341 @@
+%\title{Modelo de Projeto de pesquisa}
+%% abtex2-modelo-projeto-pesquisa.tex, v-1.9 laurocesar
+%% Copyright 2012-2013 by abnTeX2 group at http://abntex2.googlecode.com/ 
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is the abnTeX2 team, led
+%% by Lauro César Araujo. Further information are available on 
+%% http://abntex2.googlecode.com/
+%%
+%% This work consists of the files abntex2-modelo-projeto-pesquisa.tex
+%% and abntex2-modelo-references.bib
+%%
+
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% abnTeX2: Modelo de Projeto de pesquisa em conformidade com 
+% ABNT NBR 15287:2011 Informação e documentação - Projeto de pesquisa -
+% Apresentação 
+% ------------------------------------------------------------------------ 
+% ------------------------------------------------------------------------
+
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,			% para impressão em verso e anverso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	french,				% idioma adicional para hifenização
+	spanish,			% idioma adicional para hifenização
+	brazil,				% o último idioma é o principal do documento
+	]{abntex2}
+
+% ---
+% PACOTES
+% ---
+
+% ---
+% Pacotes fundamentais 
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+% ---
+
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\usepackage{lipsum}				% para geração de dummy text
+% ---
+
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+% --- 
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Coletando dados de memória de uma máquina em nuvem para análise forense}
+\autor{Hamilton Fonte II}
+\orientador{Marcos Antonio Simplício Jr}
+\local{São Paulo, Brasil}
+\data{2016, v-0.1}
+\instituicao{%
+  Universidade de São Paulo -- USP
+  \par
+  Escola Politécnica - Engenharia de Computação
+  \par
+  Programa de Pós Graduação em Engenharia Elétrica - Mestrado}
+\tipotrabalho{Plano de Pesquisa de Pós-Graduação - Mestrado}
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+\preambulo{Projeto de pesquisa para a disciplina Metodolodia de Pesquisa 
+Científica em Engenharia de Computação.}
+% ---
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{projeto de pesquisa}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+
+% ---
+% Capa
+% ---
+\imprimircapa
+% ---
+
+% ---
+% Folha de rosto
+% ---
+\imprimirfolhaderosto
+% ---
+
+% ---
+% NOTA DA ABNT NBR 15287:2011, p. 4:
+%  ``Se exigido pela entidade, apresentar os dados curriculares do autor em
+%     folha ou página distinta após a folha de rosto.''
+% ---
+
+% ---
+% inserir o sumario
+% ---
+\tableofcontents
+\cleardoublepage
+% ---
+
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ----------------------------------------------------------
+% Introdução
+% ----------------------------------------------------------
+\chapter{Introdução}
+
+Aqui vai a introdução
+
+% ----------------------------------------------------------
+% Capitulo de justificativa 
+% ----------------------------------------------------------
+\chapter{Justificativa}
+
+Aqui vai a justificativa
+
+% ----------------------------------------------------------
+% Capitulo de Objetivos 
+% ----------------------------------------------------------
+\chapter{Objetivos}
+
+Aqui vão os objetivos
+
+% ----------------------------------------------------------
+% Plano de Trabalho 
+% ----------------------------------------------------------
+\chapter{Métodos}
+
+Aqui vão os métodos
+
+% ----------------------------------------------------------
+% Material e métodos
+% ----------------------------------------------------------
+\chapter{Revisão Bibliográfica}
+
+\begin{itemize}
+
+\item \textbf{Digital forensics framework for a cloud environment \cite{George2012} }: Framework para coleta de dados de máquinas virtuais. Tem duas formas de acionamento,
+a manual e outra integrada com algum sistema de detecção de ameaça. Quando acionado, escuta a rede, determina qual a máquina é objeto de investigação e coleta informações de 
+log e tráfego de rede e associa ao usuário das respectivas máquinas. Propõe o armazenamento das evidências em local fora da núvem para escapar de problemas de jurisdição e
+multi-inquilino mas tem inteligência para usar a própria nuvem como armazenamento caso o espaço na midia extena acabe.
+
+O framework proposto, apesar de cobrir o cenário em que uma máquina é despejada do pool e os recursos liberados, não dá detalhes o suficiente para demonstrar que consegue
+reproduzir o processo e obter o mesmo resultado. Dá a entender que é aplicável apenas a um sistema virtual estático, onde o número e organização das máquinas é constante. 
+De informação volátil, coleta apenas tráfego de rede, não coleta memória. Com a forma de acionamento descrito ele não consegue descrever, com as evidências, como era o 
+sistema antes do ataque. Apesar de armazenar a evidëncia fora da nuvem, não dá detalhes de cadeia de custódia, garantia de integridade e confidencialidade. Esta abordagem 
+tem um viés mais técnico, leva poucas questões jurídicas em consideração.
+
+De melhor, eu proponho autilização de container para associar a evidência a sua origem tornando o processo independente de máquina. Como eu implemento uma janela de x dias
+de coleta antes da detecção do ataque eu consigo descrever, através de evidência como era o sistema antes do mesmo. Com isso consigo evidências em um cenário
+de infra-estrutura dinâmica. Eu tomo precauções para garantir a integridade e confidencialidade dos dados transportando via TLS os dados para um local fora da nuvem e 
+estabelecendo um controle de acesso.\\
+ 
+\item \textbf{Evidence and cloud computing the virtual machine introspection approach \cite{Poisel2013} }: Descreve um método de coleta de informações de máquinas
+em nuvem através da técnica de introspecção em máquina virtual, onde se acessa os dados das máquinas virtuais através do hypervisor. Propõe que o processo seja disparado
+por demanda atrelado a um sistema de detecção de ameaça ou intervenção humana.
+
+A técnica descrita cobre apenas o processo de coleta de informações, não explica onde ou como elas serão armazenadas. No que tange as informações de memória, como os 
+endereços de memória são os do host, estes precisam ser traduzidos para que a análise forense seja feita. Segundo a comunidade, tal estratégia é imune a técnicas anti-
+forenses empregadas por usuários maliciosos pois esta localizada fora da VM. Como a abordagem não tem conhecimento do que esta rodando dentro da máquina virtual precisa
+de uma copia bit a bit da evidência. Embora pareça possível, não descreve como lida com o cenário onde uma máquina é despejada do pool e os recursos liberados. 
+
+De melhor, eu proponho um arcabouço para coleta e armazenamento de evidências, não apenas a coleta. Minha abordagem usa uma estratégia diferente pois coleto a memória diretamente
+dentro da máquina virtual. Nessa estratégia eu evito o problema do semantic gap, não preciso realizar tradução de endereços para viabilizar a análise forense mas, de acordo com 
+a comunidade fico mais sucetível a técnicas anti-forenses. Minha abordagem teria também a vantagem de conhecer o que esta rodando dentro da máquina e assim formatar a coleta 
+de acordo.\\
+
+\item \textbf{Design and implementation of FROST: FoRensic tools for Open STack \cite{Dykstra2013} }: Framework para coleta de dados de máquinas virtuais através da API do
+hypervisor. Isola a máquina virtual afetada do pool original para realização da coleta. Precisa ser acionado quando uma ameaça é detectada. É o mais bem acabado arcabouço de
+todas as propostas encontradas até agora mas ainda assim é uma proposta técnica, faz breve mensão a aspectos legais. Por estar integrado ao Open Stack o arcabouço depende de
+cooperação do provedor de serviços de núvem onde ele esta rodando, isso é considerado problemático pela comunidade pois a prioridade do mesmo é manter o serviço funcionando
+e não coletar evidencias forenses. Como roda no hypervisor não conhece o que esta rodando dentro da máquina. Depende da existência da máquina virtual para realização da coleta.
+
+De melhor, eu proponho a utilização de container para associar a evidência de memória a sua origem tornando o processo independente de máquina e a janela de x dias antes da 
+detecção do ataque para conseguir descrever o sistema antes do mesmo. Minha proposta não depende de cooperação do provedor do serviço de nuvem. Minha abordagem teria também
+a vantagem de conhecer o que esta rodando dentro da máquina e assim formatar a coleta de acordo.\\
+  
+\item \textbf{Automated Forensic Data Acquisition in the Cloud \cite{Reichert2015} }: Propõe um modelo que tira snapshots de máquinas virtuais atrelado a algum mecanismo de
+detecção de ameaça baseado no hypervisor. Usa o Google Rapid Response para salvar as informações coletadas fora da núvem de forma a driblar os problemas de multi-jurisdição e 
+multi-inquilino. Descreve satisfatóriamente a cadeia de custódia da evidência.
+
+O modelo proposto só começa a coletar evidência após a detecção da ameaça, e toma um snapshot da máquina toda o que já foi julgado pela comunidade como um processo custoso em
+termos de espaco em disco, piora o problema do volume de dados aser analisado e pessoalmente acho ariscado, um exemplo de problema é editar um HD virtual que esta atrelado a 
+uma máquina virtual da qual se gerou snapshots que pode levar a perda de dados.
+
+De melhor eu proponho apenas a coleta de informações de memória e uso a janela de coleta de x dias antes do ataque para manter sob controle a quantidade de informação que 
+precisa ser analisada. Eu proponho autilização de container para associar a evidência a sua origem tornando o processo independente de máquina. \\
+ 
+\item \textbf{A log based approach to make digital forensics easier on cloud computing \cite{Sang2013} }: Método que sugere salvar a informação coletada fora da núvem de modo a driblar
+os problemas de multi-inquilinato e multi-jurisdição, usa um mecanismo de hash para garantir a autenticidade e integridade da informação mas não dá detalhes da implementação e 
+não descreve como controla o acesso a evidência armazenada. Segundo o próprio autor, o método não funciona em IaaS. Precisa da cooperação do provedor de nuvem pois depende que 
+este último decida quais informações serão adicionadas ao log. O método não é aplicável a coleta de informações de memória.
+
+A proposta não coleta dados de memória por decisão do autor, esta proposta entrou na lista pela abordagem baseada em log. Neste quesito, minha proposta é melhor no que 
+garante todos os pontos da cadeia de custódia, integridade e confidencialidade. No âmbito da informação coletada a eu não dependo do provedor de serviço de nuvem para 
+conseguir a evidência, o serviço rodaria dentro da máquina. \\
+
+\item \textbf{Volatile memory acquisition using backup for forensic investigation \cite{Dezfouli2012} }: Técnica desenvolvida para dispositivos móveis que sugere a utilização
+do próprio como repositório das evidências coletadas da memória. Para manter a utilização de espaço ao mínimo sugere manter apenas o último estado conhecido da memória.\\
+ 
+É uma técnica interessante do ponto de vista de estratégia de armazenamento quando guarda apenas o último estado da memória. Essa abordagem porém perde a informação do momento 
+do ataque e não consegue descrever o sistema antes do mesmo. Do resto da proposta não é aplicável para este projeto pois, armazenando a evidência na máquina a mesma seria perdida
+quando a máquina fosse despejada do pool e seus recursos liberados. Outro aspecto é a cadeia de custódia que não é abordada na proposta.
+ 
+ \end{itemize}
+ 
+% ----------------------------------------------------------
+% Análise dos resultados
+% ----------------------------------------------------------
+\chapter{Análise dos Resultados}
+
+Aqui a análise dos resultados
+
+% ---
+% Finaliza a parte no bookmark do PDF
+% para que se inicie o bookmark na raiz
+% e adiciona espaço de parte no Sumário
+% ---
+\phantompart
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{abntex2-modelo-references}
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+
+\phantompart
+
+\printindex
+
+
+\end{document}

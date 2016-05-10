@@ -1,0 +1,54 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9 }
+
+\bibitem[Dezfouli et al. 2012]{Dezfouli2012}
+\abntrefinfo{Dezfouli et al.}{DEZFOULI et al.}{2012}
+{DEZFOULI, F.~N. et al. {Volatile memory acquisition using backup for forensic
+  investigation}.
+\emph{Proceedings 2012 International Conference on Cyber Security, Cyber
+  Warfare and Digital Forensic, CyberSec 2012}, p. 186--189, 2012.}
+
+\bibitem[Dykstra e Sherman 2013]{Dykstra2013}
+\abntrefinfo{Dykstra e Sherman}{DYKSTRA; SHERMAN}{2013}
+{DYKSTRA, J.; SHERMAN, A.~T. {Design and implementation of FROST: Digital
+  forensic tools for the OpenStack cloud computing platform}.
+\emph{Digital Investigation}, Elsevier Ltd, v.~10, n. SUPPL., p. S87--S95,
+  2013.
+ISSN 17422876.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1016/j.diin.2013.06.010}.}
+
+\bibitem[George, Venter e Thomas 2012]{George2012}
+\abntrefinfo{George, Venter e Thomas}{GEORGE; VENTER; THOMAS}{2012}
+{GEORGE, S.; VENTER, H.; THOMAS, F. {Digital Forensic Framework for a Cloud
+  Environment}.
+p.~1--8, 2012.}
+
+\bibitem[Poisel, Malzer e Tjoa 2013]{Poisel2013}
+\abntrefinfo{Poisel, Malzer e Tjoa}{POISEL; MALZER; TJOA}{2013}
+{POISEL, R.; MALZER, E.; TJOA, S. {Evidence and cloud computing: The virtual
+  machine introspection approach}.
+\emph{Journal of Wireless Mobile Networks, Ubiquitous Computing, and Dependable
+  Applications}, v.~4, n.~1, p. 135--152, 2013.
+ISSN 20935374 (ISSN).
+Dispon{\'\i}vel em:
+  \url{http://www.scopus.com/inward/record.url?eid=2-s2.0-84885399460{\&}partnerID=40{\&}md5=0e332690d4cb1f01934b540b535fd771}.}
+
+\bibitem[Reichert, Richards e Yoshigoe 2015]{Reichert2015}
+\abntrefinfo{Reichert, Richards e Yoshigoe}{REICHERT; RICHARDS; YOSHIGOE}{2015}
+{REICHERT, Z.; RICHARDS, K.; YOSHIGOE, K. {Automated forensic data acquisition
+  in the cloud}.
+\emph{Proceedings - 11th IEEE International Conference on Mobile Ad Hoc and
+  Sensor Systems, MASS 2014}, p. 725--730, 2015.}
+
+\bibitem[Sang 2013]{Sang2013}
+\abntrefinfo{Sang}{SANG}{2013}
+{SANG, T. {A log-based approach to make digital forensics easier on cloud
+  computing}.
+\emph{Proceedings of the 2013 3rd International Conference on Intelligent
+  System Design and Engineering Applications, ISDEA 2013}, p. 91--94, 2013.}
+
+\end{thebibliography}
