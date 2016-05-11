@@ -5,12 +5,27 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9 }
 
+\bibitem[Baar, Beek e Eijk 2014]{VanBaar2014}
+\abntrefinfo{Baar, Beek e Eijk}{BAAR; BEEK; EIJK}{2014}
+{BAAR, R.~B. van; BEEK, H. M.~A. van; EIJK, E.~J. van. {Digital Forensics as a
+  Service: A game changer}.
+\emph{Digital Investigation}, Elsevier Ltd, v.~11, p. S54--S62, 2014.
+ISSN 17422876.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1016/j.diin.2014.03.007}.}
+
 \bibitem[Dezfouli et al. 2012]{Dezfouli2012}
 \abntrefinfo{Dezfouli et al.}{DEZFOULI et al.}{2012}
 {DEZFOULI, F.~N. et al. {Volatile memory acquisition using backup for forensic
   investigation}.
 \emph{Proceedings 2012 International Conference on Cyber Security, Cyber
   Warfare and Digital Forensic, CyberSec 2012}, p. 186--189, 2012.}
+
+\bibitem[Dolan-Gavitt et al. 2011]{Dolan-Gavitt2011a}
+\abntrefinfo{Dolan-Gavitt et al.}{DOLAN-GAVITT et al.}{2011}
+{DOLAN-GAVITT, B. et al. {Virtuoso: Narrowing the semantic gap in virtual
+  machine introspection}.
+\emph{Proceedings - IEEE Symposium on Security and Privacy}, p. 297--312, 2011.
+ISSN 10816011.}
 
 \bibitem[Dykstra e Sherman 2013]{Dykstra2013}
 \abntrefinfo{Dykstra e Sherman}{DYKSTRA; SHERMAN}{2013}
@@ -50,5 +65,11 @@ Dispon{\'\i}vel em:
   computing}.
 \emph{Proceedings of the 2013 3rd International Conference on Intelligent
   System Design and Engineering Applications, ISDEA 2013}, p. 91--94, 2013.}
+
+\bibitem[Zhang, Zhang e Wang 2010]{Zhang2010}
+\abntrefinfo{Zhang, Zhang e Wang}{ZHANG; ZHANG; WANG}{2010}
+{ZHANG, L.; ZHANG, D.; WANG, L. {Live Digital Forensics in a Virtual Machine}.
+  In:  \emph{2010 Internation Conference on Computer Application and System
+  Modelling (ICCASM 2010)}. [S.l.: s.n.], 2010. v.~6, p. 328--332.}
 
 \end{thebibliography}
